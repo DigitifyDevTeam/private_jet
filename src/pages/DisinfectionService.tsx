@@ -2,33 +2,27 @@ import Header from "@/components/site/Header";
 import Footer from "@/components/site/Footer";
 import ContactSection from "@/components/site/ContactSection";
 import CircularGallery from "@/components/site/CircularGallery";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const DisinfectionService = () => {
+  const { t } = useLanguage();
   // Gallery items for disinfection services
   const galleryItems = [
     {
-      image: "/images/privatejet2.jpg",
-      text: "Cabin Disinfection",
+      image: "/images/jet.png",
+      text: t('gallery.cabin_disinfection'),
     },
     {
-      image: "/images/privatejet_cleaning.jpg",
-      text: "Surface Sanitization",
+      image: "/images/chair.png",
+      text: t('gallery.surface_sanitization'),
     },
     {
-      image: "/images/detailing-service.webp",
-      text: "Air Purification",
+      image: "/images/motor.png",
+      text: t('gallery.air_purification'),
     },
     {
-      image: "/images/gallery1.jpg",
-      text: "UV Treatment",
-    },
-    {
-      image: "/images/private-jet.png",
-      text: "Complete Sanitization",
-    },
-    {
-      image: "/images/vip-airliner.png",
-      text: "Premium Disinfection",
+      image: "/images/en cours.png",
+      text: t('gallery.complete_sanitization'),
     },
   ];
 
@@ -57,13 +51,13 @@ const DisinfectionService = () => {
           
           {/* Hero Content */}
           <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
-            <h6 className="text-lg font-semibold mb-4 tracking-wider">SERVICES</h6>
+            <h6 className="text-lg font-semibold mb-4 tracking-wider">{t('services.hero.services')}</h6>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight" style={{ fontFamily: '"Mozilla Headline", sans-serif' }}>
-              Désinfection
+              {t('services.disinfection.title')}
             </h1>
             <div className="max-w-3xl mx-auto">
               <p className="text-lg md:text-xl leading-relaxed" style={{ fontFamily: 'Inter, Helvetica Neue, SF Pro Text, Segoe UI, Arial, sans-serif' }}>
-                Step into safety with AeroLustre's dedicated aircraft disinfection service, seamlessly connecting you to comprehensive sanitization and health protection. Beyond cleaning, our ethos centres on a tailored approach, ensuring every aircraft with us receives the highest standards of hygiene and safety protocols.
+                {t('services.disinfection.hero_desc')}
               </p>
             </div>
           </div>
@@ -87,19 +81,19 @@ const DisinfectionService = () => {
               {/* Content */}
               <div className="space-y-8">
                 <div className="space-y-6">
-                  <h4 className="text-2xl md:text-3xl font-bold text-white" style={{ fontFamily: '"Mozilla Headline", sans-serif' }}>Cabin Disinfection</h4>
+                  <h4 className="text-2xl md:text-3xl font-bold text-white" style={{ fontFamily: '"Mozilla Headline", sans-serif' }}>{t('services.disinfection.cabin_disinfection')}</h4>
                   <p className="text-gray-300 leading-relaxed" style={{ fontFamily: 'Inter, Helvetica Neue, SF Pro Text, Segoe UI, Arial, sans-serif' }}>
-                    Comprehensive disinfection that eliminates harmful pathogens from your aircraft cabin, ensuring every surface meets the highest standards of hygiene and safety.
+                    {t('services.disinfection.cabin_disinfection_desc')}
                   </p>
                   
-                  <h4 className="text-2xl md:text-3xl font-bold text-white" style={{ fontFamily: '"Mozilla Headline", sans-serif' }}>Surface Sanitization</h4>
+                  <h4 className="text-2xl md:text-3xl font-bold text-white" style={{ fontFamily: '"Mozilla Headline", sans-serif' }}>{t('services.disinfection.surface_sanitization')}</h4>
                   <p className="text-gray-300 leading-relaxed" style={{ fontFamily: 'Inter, Helvetica Neue, SF Pro Text, Segoe UI, Arial, sans-serif' }}>
-                    Professional surface sanitization with hospital-grade disinfectants, guaranteeing your aircraft maintains the highest level of cleanliness and protection.
+                    {t('services.disinfection.surface_sanitization_desc')}
                   </p>
                   
-                  <h4 className="text-2xl md:text-3xl font-bold text-white" style={{ fontFamily: '"Mozilla Headline", sans-serif' }}>Air Purification</h4>
+                  <h4 className="text-2xl md:text-3xl font-bold text-white" style={{ fontFamily: '"Mozilla Headline", sans-serif' }}>{t('services.disinfection.air_purification')}</h4>
                   <p className="text-gray-300 leading-relaxed" style={{ fontFamily: 'Inter, Helvetica Neue, SF Pro Text, Segoe UI, Arial, sans-serif' }}>
-                    Advanced air purification systems that ensure optimal air quality and safety while maintaining the highest health standards and regulatory compliance.
+                    {t('services.disinfection.air_purification_desc')}
                   </p>
                   
                   <h4 className="text-2xl md:text-3xl font-bold text-white" style={{ fontFamily: '"Mozilla Headline", sans-serif' }}>UV Treatment</h4>
@@ -153,10 +147,10 @@ const DisinfectionService = () => {
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-6" style={{ fontFamily: '"Mozilla Headline", sans-serif' }}>
-                Our <span className="text-gray-300">Gallery</span>
+                {t('gallery.title')}
               </h2>
               <p className="text-gray-300 text-lg max-w-3xl mx-auto" style={{ fontFamily: 'Inter, Helvetica Neue, SF Pro Text, Segoe UI, Arial, sans-serif' }}>
-                Explore our comprehensive aircraft disinfection services through our curated gallery of exceptional work and safety protocols.
+                {t('gallery.disinfection_desc')}
               </p>
             </div>
             

@@ -1,29 +1,31 @@
 import { useState } from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function FAQSection() {
+  const { t } = useLanguage();
   const [openIndex, setOpenIndex] = useState(0);
 
   const faqs = [
     {
-      question: "What aircraft detailing services does AeroLustre provide?",
-      answer: "AeroLustre offers comprehensive aircraft detailing services including interior deep cleaning, exterior wash and wax, engine cleaning, cockpit detailing, and specialized paint protection. Our services cover everything from routine maintenance to complete aircraft restoration, ensuring your aircraft maintains its pristine appearance and optimal performance."
+      question: t('faq.1.question'),
+      answer: t('faq.1.answer')
     },
     {
-      question: "How long does a typical aircraft detailing service take?",
-      answer: "Service duration varies based on aircraft size and service level. A basic exterior wash typically takes 2-3 hours, while a complete interior and exterior detailing service can take 6-8 hours for smaller aircraft and up to 24 hours for larger jets. We provide detailed time estimates during consultation and can accommodate urgent requests when possible."
+      question: t('faq.2.question'),
+      answer: t('faq.2.answer')
     },
     {
-      question: "What safety certifications does AeroLustre maintain?",
-      answer: "AeroLustre maintains the highest industry safety certifications including IS-BAO Stage 2, ARGUS Platinum rating, and FAA compliance standards. Our team consists of certified aviation professionals with extensive training in aircraft maintenance, safety protocols, and industry best practices to ensure your aircraft receives the highest quality care."
+      question: t('faq.3.question'),
+      answer: t('faq.3.answer')
     },
     {
-      question: "Do you provide emergency maintenance services?",
-      answer: "Yes, AeroLustre offers 24/7 emergency maintenance and detailing services. Our rapid response team is available around the clock to handle urgent aircraft maintenance needs, ensuring minimal downtime and maximum safety. We maintain emergency protocols and can deploy teams to your location within hours for critical situations."
+      question: t('faq.4.question'),
+      answer: t('faq.4.answer')
     }
   ];
 
   return (
-    <section className="py-20 px-6 bg-background">
+    <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-background">
       <style>
         {`
           @import url('https://fonts.googleapis.com/css2?family=Mozilla+Headline:wght@200..700&display=swap');
@@ -39,17 +41,17 @@ export default function FAQSection() {
       <div className="max-w-4xl mx-auto">
         {/* Title */}
         <h2 
-          className="mb-[50px] md:mb-[63.5px] text-gray-light font-bold text-center mozilla-headline-faq"
+          className="mb-8 sm:mb-12 lg:mb-[50px] xl:mb-[63.5px] text-gray-light font-bold text-center mozilla-headline-faq"
           style={{
-            fontSize: '60px',
-            lineHeight: '70px'
+            fontSize: 'clamp(32px, 5vw, 60px)',
+            lineHeight: '1.1'
           }}
         >
-          Frequently Asked <span style={{ color: '#fff' }}>Questions</span>
+          {t('faq.title').split(' ').slice(0, -1).join(' ')} <span style={{ color: '#fff' }}>{t('faq.questions')}</span>
         </h2>
 
         {/* FAQ Items */}
-        <div className="space-y-6">
+        <div className="space-y-4 sm:space-y-6">
           {faqs.map((faq, index) => (
             <div key={index} className="border-b border-gray-700 pb-6 transition-all duration-300 hover:scale-[1.02] hover:border-gray-600">
               <button
@@ -67,7 +69,7 @@ export default function FAQSection() {
                   style={{
                     fontFamily: '"Mozilla Headline", serif',
                     textAlign: 'left',
-                    fontSize: '28px'
+                    fontSize: 'clamp(18px, 4vw, 28px)'
                   }}
                 >
                   {faq.question}
@@ -87,7 +89,7 @@ export default function FAQSection() {
         </div>
 
         {/* Partner Section */}
-        <div className="mt-20 grid md:grid-cols-3 gap-8">
+        <div className="mt-12 sm:mt-16 lg:mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {/* FAA */}
           <div className="text-center">
             <div className="w-16 h-16 mx-auto mb-4 bg-gray-700 rounded-full flex items-center justify-center">

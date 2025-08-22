@@ -105,9 +105,33 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground font-sans antialiased;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
-  html { scroll-behavior: smooth; }
+  html { 
+    scroll-behavior: smooth; 
+    -webkit-text-size-adjust: 100%;
+  }
+
+  /* Mobile-specific improvements */
+  @media (max-width: 640px) {
+    body {
+      font-size: 16px; /* Prevent zoom on iOS */
+    }
+    
+    input, textarea, select {
+      font-size: 16px; /* Prevent zoom on iOS */
+    }
+  }
+
+  /* Ensure mobile menu button is always visible */
+  @media (max-width: 1024px) {
+    .lg\\:hidden {
+      display: inline-flex !important;
+    }
+  }
 }
 
 @layer utilities {
@@ -117,4 +141,12 @@ All colors MUST be HSL.
   .glass { background: hsl(var(--background) / 0.08); backdrop-filter: blur(8px); }
   .overlay-30 { background-color: hsl(var(--overlay) / 0.3); }
   .hover-scale { @apply transition-transform duration-200 hover:scale-105; }
+  
+  /* Mobile touch improvements */
+  @media (max-width: 768px) {
+    button, a, [role="button"] {
+      min-height: 44px;
+      min-width: 44px;
+    }
+  }
 }

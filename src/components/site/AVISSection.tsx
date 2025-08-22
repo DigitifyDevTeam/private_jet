@@ -63,7 +63,7 @@ export default function AVISSection() {
   };
 
   return (
-    <section className="py-20 px-6 bg-background">
+    <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-background">
       <style>
         {`
           @import url('https://fonts.googleapis.com/css2?family=Mozilla+Headline:wght@200..700&display=swap');
@@ -85,7 +85,7 @@ export default function AVISSection() {
         `}
       </style>
       <div className="max-w-7xl mx-auto">
-        <div className="grid lg:grid-cols-2 gap-12 items-start relative">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-start relative">
           {/* Left side - Swiper Carousel */}
           <div className="space-y-8">
             <Swiper

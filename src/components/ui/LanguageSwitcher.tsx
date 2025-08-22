@@ -19,11 +19,17 @@ export const LanguageSwitcher = () => {
   }, []);
 
   const languages = [
-    { code: 'fr', name: 'Français', flag: '🇫🇷' },
-    { code: 'en', name: 'English', flag: '🇬🇧' }
+    { code: 'fr', name: 'Français', flag: '🇫🇷', displayCode: 'FR' },
+    { code: 'en', name: 'English', flag: '🇺🇸', displayCode: 'EN' }
   ];
 
   const currentLanguage = languages.find(lang => lang.code === language);
+  
+  // Ensure English shows "EN" instead of "US"
+  const getDisplayCode = (lang: any) => {
+    if (lang?.code === 'en') return 'EN';
+    return lang?.displayCode || lang?.code.toUpperCase();
+  };
 
   return (
     <div className="relative" ref={dropdownRef}>
@@ -31,8 +37,7 @@ export const LanguageSwitcher = () => {
         onClick={() => setIsOpen(!isOpen)}
         className="flex items-center space-x-2 px-3 py-2 text-white hover:text-gray-300 transition-colors rounded-lg hover:bg-white/10"
       >
-        <span className="text-lg">{currentLanguage?.flag}</span>
-        <span className="text-sm font-medium">{currentLanguage?.code.toUpperCase()}</span>
+        <span className="text-sm font-medium">{getDisplayCode(currentLanguage)}</span>
         <ChevronDown className={`w-4 h-4 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
       </button>
 

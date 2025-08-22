@@ -7,15 +7,15 @@ export default function Footer() {
   
   return (
     <footer className="bg-background border-t border-border">
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid md:grid-cols-4 gap-8">
+      <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {/* Company Info */}
-          <div className="md:col-span-2">
+          <div className="sm:col-span-2">
             <h3 className="font-semibold tracking-tight text-lg">AEROLUSTRE</h3>
             <p className="text-muted-foreground mt-4 max-w-md">
-              Professional aircraft maintenance and detailing services. We provide comprehensive care for your aircraft with the highest standards of quality and safety.
+              {t('footer.description')}
             </p>
-            <div className="flex gap-4 mt-6">
+            <div className="flex gap-3 sm:gap-4 mt-4 sm:mt-6">
               {/* Facebook */}
               <Button variant="outline" size="icon" className="h-10 w-10">
                 <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
@@ -49,7 +49,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li><a href="mailto:info@AeroLustre.fr" className="hover:text-foreground">info@AeroLustre.fr</a></li>
               <li><a href="tel:+123456789012" className="hover:text-foreground">+12 345 678 9012</a></li>
-              <li>24/7 Support Available</li>
+              <li>{t('footer.support_available')}</li>
             </ul>
           </div>
 
@@ -57,21 +57,21 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold mb-4">{t('footer.services')}</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><a href="#" className="hover:text-foreground">Aircraft Detailing</a></li>
-              <li><a href="#" className="hover:text-foreground">Safety Maintenance</a></li>
-              <li><a href="#" className="hover:text-foreground">Premium Care</a></li>
-              <li><a href="#" className="hover:text-foreground">Emergency Services</a></li>
+              <li><a href="#" className="hover:text-foreground">{t('footer.aircraft_detailing')}</a></li>
+              <li><a href="#" className="hover:text-foreground">{t('footer.safety_maintenance')}</a></li>
+              <li><a href="#" className="hover:text-foreground">{t('footer.premium_care')}</a></li>
+              <li><a href="#" className="hover:text-foreground">{t('footer.emergency_services')}</a></li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-border mt-8 pt-8 text-center text-sm text-muted-foreground">
+        <div className="border-t border-border mt-6 sm:mt-8 pt-6 sm:pt-8 text-center text-sm text-muted-foreground">
           <p>{t('footer.copyright')}</p>
-          <p className="mt-2 flex gap-4 justify-center">
+          <p className="mt-2 flex flex-col sm:flex-row gap-2 sm:gap-4 justify-center">
             <a href="/mentions-legales-separate" className="hover:text-foreground underline">
               {t('footer.legal')}
             </a>
-            <span className="text-muted-foreground">|</span>
+            <span className="text-muted-foreground hidden sm:inline">|</span>
             <a href="/rgpd" className="hover:text-foreground underline">
               RGPD
             </a>

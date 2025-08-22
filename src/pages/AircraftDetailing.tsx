@@ -2,33 +2,27 @@ import Header from "@/components/site/Header";
 import Footer from "@/components/site/Footer";
 import ContactSection from "@/components/site/ContactSection";
 import CircularGallery from "@/components/site/CircularGallery";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const AircraftDetailing = () => {
+  const { t } = useLanguage();
   // Gallery items for aircraft detailing
   const galleryItems = [
     {
-      image: "/images/privatejet2.jpg",
-      text: "Exterior Detailing",
+      image: "/images/jet.png",
+      text: t('gallery.private_jet'),
     },
     {
-      image: "/images/privatejet_cleaning.jpg",
-      text: "Interior Cleaning",
+      image: "/images/motor.png",
+      text: t('gallery.engine_maintenance'),
     },
     {
-      image: "/images/detailing-service.webp",
-      text: "Engine Maintenance",
+      image: "/images/chair.png",
+      text: t('gallery.luxury_seating'),
     },
     {
-      image: "/images/gallery1.jpg",
-      text: "Paint Protection",
-    },
-    {
-      image: "/images/private-jet.png",
-      text: "Cabin Restoration",
-    },
-    {
-      image: "/images/vip-airliner.png",
-      text: "Premium Care",
+      image: "/images/en cours.png",
+      text: t('gallery.work_in_progress'),
     },
   ];
 
@@ -57,13 +51,13 @@ const AircraftDetailing = () => {
           
           {/* Hero Content */}
           <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
-            <h6 className="text-lg font-semibold mb-4 tracking-wider">SERVICES</h6>
+            <h6 className="text-lg font-semibold mb-4 tracking-wider">{t('services.hero.services')}</h6>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight" style={{ fontFamily: '"Mozilla Headline", sans-serif' }}>
-              Nettoyage Exterieur
+              {t('services.exterior.title')}
             </h1>
             <div className="max-w-3xl mx-auto">
               <p className="text-lg md:text-xl leading-relaxed" style={{ fontFamily: 'Inter, Helvetica Neue, SF Pro Text, Segoe UI, Arial, sans-serif' }}>
-                Step into perfection with AeroLustre's dedicated aircraft detailing service, seamlessly connecting you to comprehensive cleaning and restoration. Beyond detailing, our ethos centres on a tailored approach, ensuring every aircraft with us receives museum-grade care and attention to detail.
+                {t('services.exterior.hero_desc')}
               </p>
             </div>
           </div>
@@ -87,24 +81,24 @@ const AircraftDetailing = () => {
               {/* Content */}
               <div className="space-y-8">
                 <div className="space-y-6">
-                  <h4 className="text-2xl md:text-3xl font-bold text-white" style={{ fontFamily: '"Mozilla Headline", sans-serif' }}>Interior Deep Cleaning</h4>
+                  <h4 className="text-2xl md:text-3xl font-bold text-white" style={{ fontFamily: '"Mozilla Headline", sans-serif' }}>{t('services.exterior.interior_deep_cleaning')}</h4>
                   <p className="text-gray-300 leading-relaxed" style={{ fontFamily: 'Inter, Helvetica Neue, SF Pro Text, Segoe UI, Arial, sans-serif' }}>
-                    Comprehensive interior detailing that restores your aircraft cabin to pristine condition, ensuring every surface reflects the highest standards of cleanliness and care.
+                    {t('services.exterior.interior_deep_cleaning_desc')}
                   </p>
                   
-                  <h4 className="text-2xl md:text-3xl font-bold text-white" style={{ fontFamily: '"Mozilla Headline", sans-serif' }}>Exterior Wash & Wax</h4>
+                  <h4 className="text-2xl md:text-3xl font-bold text-white" style={{ fontFamily: '"Mozilla Headline", sans-serif' }}>{t('services.exterior.exterior_wash_wax')}</h4>
                   <p className="text-gray-300 leading-relaxed" style={{ fontFamily: 'Inter, Helvetica Neue, SF Pro Text, Segoe UI, Arial, sans-serif' }}>
-                    Professional exterior detailing with premium wax protection, guaranteeing your aircraft maintains its stunning appearance and protection against environmental elements.
+                    {t('services.exterior.exterior_wash_wax_desc')}
                   </p>
                   
-                  <h4 className="text-2xl md:text-3xl font-bold text-white" style={{ fontFamily: '"Mozilla Headline", sans-serif' }}>Engine Cleaning</h4>
+                  <h4 className="text-2xl md:text-3xl font-bold text-white" style={{ fontFamily: '"Mozilla Headline", sans-serif' }}>{t('services.exterior.engine_cleaning')}</h4>
                   <p className="text-gray-300 leading-relaxed" style={{ fontFamily: 'Inter, Helvetica Neue, SF Pro Text, Segoe UI, Arial, sans-serif' }}>
-                    Specialized engine cleaning services that ensure optimal performance while maintaining the highest safety standards and regulatory compliance.
+                    {t('services.exterior.engine_cleaning_desc')}
                   </p>
                   
-                  <h4 className="text-2xl md:text-3xl font-bold text-white" style={{ fontFamily: '"Mozilla Headline", sans-serif' }}>Paint Protection</h4>
+                  <h4 className="text-2xl md:text-3xl font-bold text-white" style={{ fontFamily: '"Mozilla Headline", sans-serif' }}>{t('services.exterior.paint_protection')}</h4>
                   <p className="text-gray-300 leading-relaxed" style={{ fontFamily: 'Inter, Helvetica Neue, SF Pro Text, Segoe UI, Arial, sans-serif' }}>
-                    Advanced paint protection systems that preserve your aircraft's finish and ensure long-term value while maintaining its pristine appearance.
+                    {t('services.exterior.paint_protection_desc')}
                   </p>
                 </div>
               </div>
@@ -119,16 +113,16 @@ const AircraftDetailing = () => {
               {/* Content */}
               <div className="space-y-8">
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight" style={{ fontFamily: '"Mozilla Headline", sans-serif' }}>
-                  Plongez dans l'univers de la <span className="text-gray-300">perfection</span> avec <span className="text-gray-300">AeroLustre</span>.
+                  {t('services.exterior.perfection_title')}
                 </h2>
                 
                 <div className="space-y-6">
                   <p className="text-gray-300 leading-relaxed text-lg" style={{ fontFamily: 'Inter, Helvetica Neue, SF Pro Text, Segoe UI, Arial, sans-serif' }}>
-                    Chez AeroLustre, nous comprenons que chaque <span className="font-bold underline">Jet Privé</span> est le reflet de l'excellence et du prestige. Notre service de nettoyage extérieur transforme votre appareil en véritable œuvre d'art, où chaque détail compte et chaque surface brille de mille feux.
+                    {t('services.exterior.perfection_desc1')}
                   </p>
                   
                   <p className="text-gray-300 leading-relaxed text-lg" style={{ fontFamily: 'Inter, Helvetica Neue, SF Pro Text, Segoe UI, Arial, sans-serif' }}>
-                    Notre expertise unique combine techniques traditionnelles et technologies de pointe pour offrir un résultat incomparable. Nous ne nous contentons pas de nettoyer, nous restaurons la splendeur originelle de votre avion, préservant sa valeur et son éclat pour les années à venir.
+                    {t('services.exterior.perfection_desc2')}
                   </p>
                 </div>
               </div>
@@ -152,10 +146,10 @@ const AircraftDetailing = () => {
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-6" style={{ fontFamily: '"Mozilla Headline", sans-serif' }}>
-                Our <span className="text-gray-300">Gallery</span>
+                {t('gallery.title')}
               </h2>
               <p className="text-gray-300 text-lg max-w-3xl mx-auto" style={{ fontFamily: 'Inter, Helvetica Neue, SF Pro Text, Segoe UI, Arial, sans-serif' }}>
-                Explore our comprehensive aircraft exterior cleaning services through our curated gallery of exceptional work and stunning transformations.
+                {t('gallery.exterior_desc')}
               </p>
             </div>
             

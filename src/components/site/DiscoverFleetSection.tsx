@@ -5,7 +5,7 @@ export default function DiscoverFleetSection() {
   const { t } = useLanguage();
   
   return (
-    <section className="py-20 px-6 bg-background">
+    <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-background">
       <style>
         {`
           @import url('https://fonts.googleapis.com/css2?family=Mozilla+Headline:wght@200..700&display=swap');
@@ -34,11 +34,11 @@ export default function DiscoverFleetSection() {
             </p>
           </div>
 
-          <div className="mb-16">
+          <div className="mb-8 sm:mb-12 lg:mb-16">
             {/* Main Heading */}
             <div className="max-w-2xl">
               <h2
-                className="text-3xl md:text-4xl lg:text-5xl leading-tight mozilla-headline-fleet"
+                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight mozilla-headline-fleet"
                 style={{
                   color: '#dad9d6',
                   lineHeight: '1.1'
@@ -50,9 +50,9 @@ export default function DiscoverFleetSection() {
           </div>
 
           {/* Fleet Cards */}
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {/* Private Jet */}
-            <div className="group relative rounded-3xl overflow-hidden bg-gray-800 min-h-[400px] hover:scale-[1.02] transition-all duration-500 cursor-pointer">
+            <div className="group relative rounded-2xl sm:rounded-3xl overflow-hidden bg-gray-800 min-h-[300px] sm:min-h-[350px] lg:min-h-[400px] hover:scale-[1.02] transition-all duration-500 cursor-pointer">
               <div className="absolute inset-0">
                 <img
                   src="/images/private-jet.png"
@@ -62,9 +62,9 @@ export default function DiscoverFleetSection() {
                 <div className="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-40 transition-all duration-500"></div>
               </div>
               
-              <div className="relative z-10 p-8 h-full flex flex-col justify-end group-hover:justify-center transition-all duration-500">
+              <div className="relative z-10 p-4 sm:p-6 lg:p-8 h-full flex flex-col justify-end group-hover:justify-center transition-all duration-500">
                 <h4
-                  className="mb-2.5 md:mb-3 !text-[36px] text-white !leading-[40px] mb-0 group-hover:mb-6 transition-all duration-500"
+                  className="mb-2 sm:mb-2.5 md:mb-3 !text-[24px] sm:!text-[30px] lg:!text-[36px] text-white !leading-tight sm:!leading-[40px] mb-0 group-hover:mb-6 transition-all duration-500"
                   style={{
                     color: '#ffffff',
                     fontSize: '36px',
@@ -95,7 +95,7 @@ export default function DiscoverFleetSection() {
             </div>
 
             {/* VIP Airliner */}
-            <div className="group relative rounded-3xl overflow-hidden bg-gray-800 min-h-[400px] hover:scale-[1.02] transition-all duration-500 cursor-pointer">
+            <div className="group relative rounded-2xl sm:rounded-3xl overflow-hidden bg-gray-800 min-h-[300px] sm:min-h-[350px] lg:min-h-[400px] hover:scale-[1.02] transition-all duration-500 cursor-pointer">
               <div className="absolute inset-0">
                 <img
                   src="/images/vip-airliner.png"
@@ -105,9 +105,9 @@ export default function DiscoverFleetSection() {
                 <div className="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-40 transition-all duration-500"></div>
               </div>
               
-              <div className="relative z-10 p-8 h-full flex flex-col justify-end group-hover:justify-center transition-all duration-500">
+              <div className="relative z-10 p-4 sm:p-6 lg:p-8 h-full flex flex-col justify-end group-hover:justify-center transition-all duration-500">
                 <h4
-                  className="mb-2.5 md:mb-3 !text-[36px] text-white !leading-[40px] mb-0 group-hover:mb-6 transition-all duration-500"
+                  className="mb-2 sm:mb-2.5 md:mb-3 !text-[24px] sm:!text-[30px] lg:!text-[36px] text-white !leading-tight sm:!leading-[40px] mb-0 group-hover:mb-6 transition-all duration-500"
                   style={{
                     color: '#ffffff',
                     fontSize: '36px',
@@ -138,7 +138,7 @@ export default function DiscoverFleetSection() {
             </div>
 
             {/* Commercial VIP */}
-            <div className="group relative rounded-3xl overflow-hidden bg-gray-800 min-h-[400px] hover:scale-[1.02] transition-all duration-500 cursor-pointer">
+            <div className="group relative rounded-2xl sm:rounded-3xl overflow-hidden bg-gray-800 min-h-[300px] sm:min-h-[350px] lg:min-h-[400px] hover:scale-[1.02] transition-all duration-500 cursor-pointer">
               <div className="absolute inset-0">
                 <img
                   src="/images/business-vip.png"
@@ -148,9 +148,9 @@ export default function DiscoverFleetSection() {
                 <div className="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-40 transition-all duration-500"></div>
               </div>
               
-              <div className="relative z-10 p-8 h-full flex flex-col justify-end group-hover:justify-center transition-all duration-500">
+              <div className="relative z-10 p-4 sm:p-6 lg:p-8 h-full flex flex-col justify-end group-hover:justify-center transition-all duration-500">
                 <h4
-                  className="mb-2.5 md:mb-3 !text-[36px] text-white !leading-[40px] mb-0 group-hover:mb-6 transition-all duration-500"
+                  className="mb-2 sm:mb-2.5 md:mb-3 !text-[24px] sm:!text-[30px] lg:!text-[36px] text-white !leading-tight sm:!leading-[40px] mb-0 group-hover:mb-6 transition-all duration-500"
                   style={{
                     color: '#ffffff',
                     fontSize: '36px',

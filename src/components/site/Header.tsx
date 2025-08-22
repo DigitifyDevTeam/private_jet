@@ -65,12 +65,12 @@ export default function Header() {
       }`}
       aria-label="Primary"
     >
-      <div className="container mx-auto flex items-center justify-between px-4 py-4">
-        <Link to="/" className="font-semibold tracking-tight text-lg">
+      <div className="container mx-auto flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4">
+        <Link to="/" className="font-semibold tracking-tight text-base sm:text-lg">
         AEROLUSTRE
         </Link>
 
-        <nav className="hidden md:flex items-center gap-8 text-sm">
+        <nav className="hidden lg:flex items-center gap-8 text-sm">
           {nav.map((item) => (
             item.hasMegaMenu ? (
               <div 
@@ -149,12 +149,12 @@ export default function Header() {
           onMouseLeave={() => setShowMegaMenu(false)}
         >
           {/* Header Content */}
-          <div className="container mx-auto flex items-center justify-between px-4 py-4">
-            <Link to="/" className="font-semibold tracking-tight text-lg">
+          <div className="container mx-auto flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4">
+            <Link to="/" className="font-semibold tracking-tight text-base sm:text-lg">
               AEROLUSTRE
             </Link>
 
-            <nav className="hidden md:flex items-center gap-8 text-sm">
+            <nav className="hidden lg:flex items-center gap-8 text-sm">
               {nav.map((item) => (
                 item.hasMegaMenu ? (
                   <div 
@@ -220,7 +220,7 @@ export default function Header() {
               ))}
             </nav>
 
-            <div className="hidden md:flex items-center gap-3">
+            <div className="hidden lg:flex items-center gap-3">
               <Button asChild variant="ghostContrast" className="h-10 px-4">
                 <a href="tel:+10000000000" aria-label="Call 24/7">
                   <Phone className="mr-2" /> Call 24/7
@@ -234,12 +234,12 @@ export default function Header() {
 
           {/* Services Cards */}
           <div className="container mx-auto px-4 pb-12 lg:pb-16 mt-8 lg:mt-12">
-            <div className="grid grid-cols-3 gap-8 lg:gap-12 max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-12 max-w-5xl mx-auto">
               {servicesItems.map((service) => (
                 <Link 
                   key={service.href} 
                   to={service.href}
-                  className="h-[150px] md:h-[180px] lg:h-[200px] w-full relative rounded-[30px] overflow-hidden group hover:scale-105 transition-transform duration-300 cursor-pointer"
+                  className="h-[120px] sm:h-[150px] md:h-[180px] lg:h-[200px] w-full relative rounded-[20px] sm:rounded-[30px] overflow-hidden group hover:scale-105 transition-transform duration-300 cursor-pointer"
                   onClick={() => setShowMegaMenu(false)}
                 >
                   <div className="absolute inset-0">
@@ -253,12 +253,12 @@ export default function Header() {
                       }}
                     />
                   </div>
-                  <div className="absolute inset-0 flex items-end p-6 lg:p-8">
+                  <div className="absolute inset-0 flex items-end p-4 sm:p-6 lg:p-8">
                     <div>
-                      <h4 className="mb-2 md:mb-3 text-2xl md:text-3xl lg:text-[36px] text-white font-bold leading-tight">
+                      <h4 className="mb-2 md:mb-3 text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-[36px] text-white font-bold leading-tight">
                         {service.title}
                       </h4>
-                      <div className="text-white/90 font-semibold text-base">
+                      <div className="text-white/90 font-semibold text-sm sm:text-base">
                         {service.description}
                       </div>
                       <div className="mt-4 flex items-center text-white text-sm font-medium">
@@ -275,7 +275,7 @@ export default function Header() {
           </div>
         </div>
 
-        <div className="hidden md:flex items-center gap-3">
+        <div className="hidden lg:flex items-center gap-3">
           <LanguageSwitcher />
           <Button asChild variant="ghostContrast" className="h-10 px-4">
             <a href="tel:+10000000000" aria-label="Call 24/7">
@@ -288,15 +288,15 @@ export default function Header() {
         </div>
 
         <button
-          className="md:hidden inline-flex items-center justify-center p-2 rounded-md hover:bg-foreground/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+          className="lg:hidden inline-flex items-center justify-center p-3 rounded-md hover:bg-foreground/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring text-white min-w-[44px] min-h-[44px]"
           onClick={() => setOpen(true)}
           aria-label="Open menu"
         >
-          <Menu />
+          <Menu className="w-6 h-6" />
         </button>
 
         <Dialog open={open} onOpenChange={setOpen}>
-          <DialogContent className="p-0 max-w-none h-screen w-screen border-0 bg-background/95 backdrop-blur-sm">
+          <DialogContent className="p-0 max-w-none h-screen w-screen border-0 bg-background/95 backdrop-blur-sm fixed inset-0 z-50 sm:max-w-none">
             <div className="flex items-center justify-between p-4">
               <span className="font-semibold">AEROLUSTRE</span>
               <button
@@ -307,8 +307,8 @@ export default function Header() {
                 <X />
               </button>
             </div>
-            <div className="px-6 pb-10">
-              <ul className="grid gap-6 text-xl">
+            <div className="px-4 sm:px-6 pb-8 sm:pb-10">
+              <ul className="grid gap-4 sm:gap-6 text-lg sm:text-xl">
                 {nav.map((n) => (
                   <li key={n.href}>
                     {n.hasMegaMenu ? (
@@ -319,11 +319,11 @@ export default function Header() {
                         <ul className="ml-4 mt-2 space-y-2">
                           {servicesItems.map((service) => (
                             <li key={service.href}>
-                              <Link
-                                to={service.href}
-                                onClick={() => setOpen(false)}
-                                className="block py-1 text-muted-foreground hover:text-foreground text-lg"
-                              >
+                                                      <Link
+                          to={service.href}
+                          onClick={() => setOpen(false)}
+                          className="block py-3 text-muted-foreground hover:text-foreground text-lg"
+                        >
                                 {service.title}
                               </Link>
                             </li>
@@ -334,7 +334,7 @@ export default function Header() {
                       <Link
                         to={n.href}
                         onClick={() => setOpen(false)}
-                        className="block py-2 hover:text-foreground text-muted-foreground"
+                        className="block py-3 hover:text-foreground text-muted-foreground"
                       >
                         {n.label}
                       </Link>
@@ -346,7 +346,7 @@ export default function Header() {
                           setOpen(false);
                           handleNavClick(n.href);
                         }}
-                        className="block py-2 hover:text-foreground text-muted-foreground"
+                        className="block py-3 hover:text-foreground text-muted-foreground"
                       >
                         {n.label}
                       </a>
@@ -354,7 +354,7 @@ export default function Header() {
                   </li>
                 ))}
               </ul>
-              <div className="mt-8 flex flex-col gap-3">
+              <div className="mt-6 sm:mt-8 flex flex-col gap-3">
                 <div className="flex justify-center">
                   <LanguageSwitcher />
                 </div>
