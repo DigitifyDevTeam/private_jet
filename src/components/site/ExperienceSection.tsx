@@ -98,7 +98,7 @@ export default function ExperienceSection() {
               <span className="text-gray-500">Experience</span>
             </h2>
             <p className="text-gray-400 max-w-2xl">
-              AirX is committed to providing its clients with an experience, not just a journey. We pride 
+              AEROLUSTRE is committed to providing its clients with an experience, not just a journey. We pride 
               ourselves in what we do; we aim to deliver the pinnacle in luxury private aviation.
             </p>
           </div>
