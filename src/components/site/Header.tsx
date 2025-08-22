@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
-import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Phone, ChevronDown } from "lucide-react";
+import { Menu, X, Phone, ChevronDown, ChevronRight } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { LanguageSwitcher } from "@/components/ui/LanguageSwitcher";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -11,6 +10,7 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [showMegaMenu, setShowMegaMenu] = useState(false);
+  const [showServices, setShowServices] = useState(false);
   const location = useLocation();
 
   const nav = [
@@ -288,86 +288,105 @@ export default function Header() {
         </div>
 
         <button
-          className="lg:hidden inline-flex items-center justify-center p-3 rounded-md hover:bg-foreground/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring text-white min-w-[44px] min-h-[44px]"
-          onClick={() => setOpen(true)}
+          className="lg:hidden inline-flex items-center justify-center p-3 rounded-md hover:bg-foreground/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring text-white min-w-[44px] min-h-[44px] bg-gray-800/50"
+          onClick={() => {
+            console.log('Mobile menu button clicked, setting open to true');
+            setOpen(true);
+          }}
           aria-label="Open menu"
         >
           <Menu className="w-6 h-6" />
         </button>
 
-        <Dialog open={open} onOpenChange={setOpen}>
-          <DialogContent className="p-0 max-w-none h-screen w-screen border-0 bg-background/95 backdrop-blur-sm fixed inset-0 z-50 sm:max-w-none">
-            <div className="flex items-center justify-between p-4">
-              <span className="font-semibold">AEROLUSTRE</span>
-              <button
-                className="inline-flex items-center justify-center p-2 rounded-md hover:bg-foreground/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-                onClick={() => setOpen(false)}
-                aria-label="Close menu"
-              >
-                <X />
-              </button>
-            </div>
-            <div className="px-4 sm:px-6 pb-8 sm:pb-10">
-              <ul className="grid gap-4 sm:gap-6 text-lg sm:text-xl">
-                {nav.map((n) => (
-                  <li key={n.href}>
-                    {n.hasMegaMenu ? (
-                      <div>
-                        <div className="block py-2 text-muted-foreground font-medium">
-                          {n.label}
-                        </div>
-                        <ul className="ml-4 mt-2 space-y-2">
-                          {servicesItems.map((service) => (
-                            <li key={service.href}>
-                                                      <Link
-                          to={service.href}
-                          onClick={() => setOpen(false)}
-                          className="block py-3 text-muted-foreground hover:text-foreground text-lg"
-                        >
-                                {service.title}
-                              </Link>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    ) : n.href === '/' ? (
-                      <Link
-                        to={n.href}
-                        onClick={() => setOpen(false)}
-                        className="block py-3 hover:text-foreground text-muted-foreground"
-                      >
-                        {n.label}
-                      </Link>
-                    ) : (
-                      <a
-                        href={n.href}
-                        onClick={(e) => {
-                          e.preventDefault();
-                          setOpen(false);
-                          handleNavClick(n.href);
-                        }}
-                        className="block py-3 hover:text-foreground text-muted-foreground"
-                      >
-                        {n.label}
-                      </a>
-                    )}
-                  </li>
-                ))}
-              </ul>
-              <div className="mt-6 sm:mt-8 flex flex-col gap-3">
-                <div className="flex justify-center">
+        {/* Mobile Menu Overlay */}
+        {open && (
+          <div className="lg:hidden fixed inset-0 z-[9999] bg-black/90 backdrop-blur-sm">
+            <div className="flex flex-col h-full">
+              {/* Header */}
+              <div className="flex items-center justify-between p-4 border-b border-gray-700">
+                <div className="flex items-center gap-4">
+                  <span className="font-semibold text-white text-lg">AEROLUSTRE</span>
                   <LanguageSwitcher />
                 </div>
-                <Button asChild variant="hero" className="h-11">
-                  <a href="#contact">Request a Quote</a>
-                </Button>
-                <Button asChild variant="ghostContrast" className="h-11">
-                  <a href="tel:+10000000000"><Phone className="mr-2"/>Call 24/7</a>
-                </Button>
+                <button
+                  className="inline-flex items-center justify-center p-2 rounded-md hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white text-white"
+                  onClick={() => setOpen(false)}
+                  aria-label="Close menu"
+                >
+                  <X className="w-6 h-6" />
+                </button>
+              </div>
+              
+              {/* Menu Content */}
+              <div className="flex-1 px-4 py-6 overflow-y-auto">
+                <ul className="space-y-4">
+                  {nav.map((n) => (
+                    <li key={n.href}>
+                      {n.hasMegaMenu ? (
+                        <div>
+                          <button
+                            onClick={() => setShowServices(!showServices)}
+                            className="w-full flex items-center justify-between py-3 text-white font-semibold text-lg border-b border-gray-700 hover:bg-white/10 rounded-lg transition-colors"
+                          >
+                            <span>{n.label}</span>
+                            {showServices ? (
+                              <ChevronDown className="w-5 h-5" />
+                            ) : (
+                              <ChevronRight className="w-5 h-5" />
+                            )}
+                          </button>
+                          <div className={`overflow-hidden transition-all duration-300 ease-in-out ${showServices ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
+                            <ul className="mt-3 space-y-2">
+                              {servicesItems.map((service) => (
+                                <li key={service.href}>
+                                  <Link
+                                    to={service.href}
+                                    onClick={() => {
+                                      setOpen(false);
+                                      setShowServices(false);
+                                    }}
+                                    className="block py-3 px-4 text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition-colors"
+                                  >
+                                    {service.title}
+                                  </Link>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        </div>
+                      ) : n.href === '/' ? (
+                        <Link
+                          to={n.href}
+                          onClick={() => setOpen(false)}
+                          className="block py-3 px-4 text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition-colors font-medium"
+                        >
+                          {n.label}
+                        </Link>
+                      ) : (
+                        <a
+                          href={n.href}
+                          onClick={(e) => {
+                            e.preventDefault();
+                            setOpen(false);
+                            handleNavClick(n.href);
+                          }}
+                          className="block py-3 px-4 text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition-colors font-medium"
+                        >
+                          {n.label}
+                        </a>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+                
+                {/* Bottom Buttons */}
+                <div className="mt-8">
+                  {/* Menu content ends here - no additional buttons needed */}
+                </div>
               </div>
             </div>
-          </DialogContent>
-        </Dialog>
+          </div>
+        )}
       </div>
     </header>
   );

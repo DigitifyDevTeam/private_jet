@@ -33,10 +33,10 @@ const translations = {
     'section.discover_fleet': 'Découvrez notre flotte',
     'section.discover_fleet_description': 'Créer une approche sur mesure de l\'aviation privée qui dépasse les attentes de nos clients',
     'section.faq': 'Questions fréquemment posées',
-    'section.testimonials': 'Avis clients',
+
     'section.experience': 'Expérience AeroLustre',
     'section.contact': 'Contactez notre équipe d\'experts',
-    'section.offices': 'Nos bureaux',
+
     
     // Contact
     'contact.whatsapp': 'WhatsApp',
@@ -50,11 +50,7 @@ const translations = {
     'footer.contact': 'Contact',
     'footer.legal': 'Mentions légales / RGPD',
     
-    // Office locations
-    'office.france': 'France',
-    'office.dubai': 'Dubaï (Siège)',
-    'office.france_address': 'Terminal 2F, Aéroport Charles de Gaulle, Zone Aviation Privée, Roissy, 95700, France',
-    'office.dubai_address': 'Aéroport International Al Maktoum, Dubai World Central, Terminal 1, Dubaï, Émirats Arabes Unis',
+
     
     // Fleet
     'fleet.private_jet': 'Jet Privé',
@@ -65,11 +61,7 @@ const translations = {
     'fleet.commercial_vip_desc': 'Notre service VIP commercial combine sophistication et efficacité. Idéal pour les voyages d\'affaires, nos cabines offrent un environnement professionnel avec des équipements de pointe et un service personnalisé pour répondre aux besoins exigeants des voyageurs d\'affaires.',
     'fleet.discover_more': 'Découvrir Plus',
     
-    // Testimonials
-    'testimonial.1.quote': 'AeroLustre a transformé notre expérience de maintenance d\'avions. Leur attention aux détails et leur service professionnel ont dépassé toutes nos attentes. La qualité de leur travail est simplement exceptionnelle.',
-    'testimonial.2.quote': 'Travailler avec AeroLustre a été un changement de jeu pour notre flotte. Leur expertise en nettoyage et maintenance d\'avions a maintenu nos avions en parfait état. Fortement recommandé !',
-    'testimonial.3.quote': 'L\'engagement d\'AeroLustre envers l\'excellence est inégalé. Le professionnalisme et le dévouement de leur équipe à la qualité en ont fait notre partenaire de confiance pour tous nos besoins de maintenance d\'avions.',
-    'testimonial.4.quote': 'Le niveau de service et l\'attention aux détails qu\'AeroLustre fournit sont exceptionnels. Ils comprennent l\'importance de maintenir les plus hauts standards dans l\'aviation.',
+
     
     // Experience Services
     'experience.aircraft_detailing': 'Nettoyage d\'Avion',
@@ -113,6 +105,16 @@ const translations = {
     'experience.section_title': 'Expérience',
     'experience.description': 'AeroLustre s\'engage à fournir à ses clients une expérience, pas seulement un voyage. Nous sommes fiers de ce que nous faisons ; nous visons à livrer le summum de l\'aviation privée de luxe.',
     'experience.discover_more': 'Découvrir Plus',
+    
+    // Trust Section
+    'trust.title': 'Qui fait notre confiance',
+    'trust.description': 'Nous travaillons avec les plus grandes marques de l\'aviation privée pour garantir des services de qualité exceptionnelle.',
+    
+    // Airports Section
+    'airports.title': 'Nous intervenons aux aéroports suivants',
+    'airports.description': 'AeroLustre opère dans les principaux aéroports internationaux, offrant des services de maintenance et de nettoyage d\'avions privés de qualité exceptionnelle.',
+    'airports.cta_text': 'Besoin de nos services dans un autre aéroport ?',
+    'airports.cta_button': 'Contactez-nous',
     
     // Contact Section
     'contact.whatsapp_description': 'Gérez vos demandes et réservations en déplacement via chat privé avec notre équipe',
@@ -233,10 +235,10 @@ const translations = {
     'section.discover_fleet': 'Discover our fleet',
     'section.discover_fleet_description': 'Creating a bespoke approach to private aviation that exceeds our client\'s expectations',
     'section.faq': 'Frequently asked questions',
-    'section.testimonials': 'Customer reviews',
+
     'section.experience': 'AeroLustre Experience',
     'section.contact': 'Contact our team of experts',
-    'section.offices': 'Our offices',
+
     
     // Contact
     'contact.whatsapp': 'WhatsApp',
@@ -250,11 +252,7 @@ const translations = {
     'footer.contact': 'Contact',
     'footer.legal': 'Legal Notice / GDPR',
     
-    // Office locations
-    'office.france': 'France',
-    'office.dubai': 'Dubai (HQ)',
-    'office.france_address': 'Terminal 2F, Charles de Gaulle Airport, Private Aviation Zone, Roissy, 95700, France',
-    'office.dubai_address': 'Al Maktoum International Airport, Dubai World Central, Terminal 1, Dubai, United Arab Emirates',
+
     
     // Fleet
     'fleet.private_jet': 'Private Jet',
@@ -265,11 +263,7 @@ const translations = {
     'fleet.commercial_vip_desc': 'Our commercial VIP service combines sophistication and efficiency. Ideal for business travel, our cabins provide a professional environment with cutting-edge amenities and personalized service to meet the demanding needs of business travelers.',
     'fleet.discover_more': 'Discover More',
     
-    // Testimonials
-    'testimonial.1.quote': 'AeroLustre has transformed our aircraft maintenance experience. Their attention to detail and professional service exceeded all our expectations. The quality of their work is simply outstanding.',
-    'testimonial.2.quote': 'Working with AeroLustre has been a game-changer for our fleet. Their expertise in aircraft detailing and maintenance has kept our aircraft in pristine condition. Highly recommended!',
-    'testimonial.3.quote': 'AeroLustre\'s commitment to excellence is unmatched. Their team\'s professionalism and dedication to quality have made them our trusted partner for all aircraft maintenance needs.',
-    'testimonial.4.quote': 'The level of service and attention to detail that AeroLustre provides is exceptional. They understand the importance of maintaining the highest standards in aviation.',
+
     
     // Experience Services
     'experience.aircraft_detailing': 'Aircraft Detailing',
@@ -313,6 +307,16 @@ const translations = {
     'experience.section_title': 'Experience',
     'experience.description': 'AeroLustre is committed to providing its clients with an experience, not just a journey. We pride ourselves in what we do; we aim to deliver the pinnacle in luxury private aviation.',
     'experience.discover_more': 'Discover More',
+    
+    // Trust Section
+    'trust.title': 'Who trusts us',
+    'trust.description': 'We work with the biggest names in private aviation to ensure exceptional quality services.',
+    
+    // Airports Section
+    'airports.title': 'We operate at the following airports',
+    'airports.description': 'AeroLustre operates at major international airports, providing exceptional private aircraft maintenance and cleaning services.',
+    'airports.cta_text': 'Need our services at another airport?',
+    'airports.cta_button': 'Contact us',
     
     // Contact Section
     'contact.whatsapp_description': 'Manage your enquiries and bookings on the go via private chat with our team',

@@ -1,7 +1,7 @@
 import Header from "@/components/site/Header";
 import Footer from "@/components/site/Footer";
 import ContactSection from "@/components/site/ContactSection";
-import { OfficeLocationSection } from "@/components/site/OfficeLocationSection";
+import { AirportsSection } from "@/components/site/AirportsSection";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const Contact = () => {
@@ -33,8 +33,8 @@ const Contact = () => {
           {/* Contact Section */}
           <ContactSection />
           
-          {/* Office Locations Section */}
-          <OfficeLocationSection />
+          {/* Airports Section */}
+          <AirportsSection />
         </main>
       
               <Footer />
