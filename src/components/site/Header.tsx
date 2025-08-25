@@ -362,6 +362,22 @@ export default function Header() {
                         >
                           {n.label}
                         </Link>
+                      ) : n.href === '/contact' ? (
+                        <Link
+                          to={n.href}
+                          onClick={() => setOpen(false)}
+                          className="block py-3 px-4 text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition-colors font-medium"
+                        >
+                          {n.label}
+                        </Link>
+                      ) : n.href === '/a-propos' ? (
+                        <Link
+                          to={n.href}
+                          onClick={() => setOpen(false)}
+                          className="block py-3 px-4 text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition-colors font-medium"
+                        >
+                          {n.label}
+                        </Link>
                       ) : (
                         <a
                           href={n.href}
