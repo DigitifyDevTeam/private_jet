@@ -17,6 +17,7 @@ export default function Header() {
     { href: "/", label: "Home" },
     { href: "#services", label: t('nav.services'), hasMegaMenu: true },
     { href: "/a-propos", label: t('nav.about') },
+    { href: "/demander-un-devis", label: "Demander un devis" },
     { href: "/contact", label: t('nav.contact') },
   ];
 
@@ -122,6 +123,18 @@ export default function Header() {
               >
                 {item.label}
               </Link>
+            ) : item.href === '/demander-un-devis' ? (
+              <Link 
+                key={item.href} 
+                to={item.href} 
+                className={`hover-scale transition-colors ${
+                  location.pathname === item.href 
+                    ? 'text-foreground' 
+                    : 'text-muted-foreground hover:text-foreground'
+                }`}
+              >
+                {item.label}
+              </Link>
             ) : (
               <a 
                 key={item.href} 
@@ -193,6 +206,18 @@ export default function Header() {
                     {item.label}
                   </Link>
                 ) : item.href === '/a-propos' ? (
+                  <Link 
+                    key={item.href} 
+                    to={item.href} 
+                    className={`hover-scale transition-colors ${
+                      location.pathname === item.href 
+                        ? 'text-foreground' 
+                        : 'text-muted-foreground hover:text-foreground'
+                    }`}
+                  >
+                    {item.label}
+                  </Link>
+                ) : item.href === '/demander-un-devis' ? (
                   <Link 
                     key={item.href} 
                     to={item.href} 
@@ -371,6 +396,14 @@ export default function Header() {
                           {n.label}
                         </Link>
                       ) : n.href === '/a-propos' ? (
+                        <Link
+                          to={n.href}
+                          onClick={() => setOpen(false)}
+                          className="block py-3 px-4 text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition-colors font-medium"
+                        >
+                          {n.label}
+                        </Link>
+                      ) : n.href === '/demander-un-devis' ? (
                         <Link
                           to={n.href}
                           onClick={() => setOpen(false)}

@@ -1,8 +1,59 @@
 import Reveal from "./Reveal";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-export default function ContactSection() {
+interface ContactSectionProps {
+  onContactSubmit?: () => void;
+}
+
+export default function ContactSection({ onContactSubmit }: ContactSectionProps) {
   const { t } = useLanguage();
+  const navigate = useNavigate();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState({
+    reason: '',
+    fullName: '',
+    phone: '',
+    email: '',
+    company: '',
+    message: '',
+    privacyAccepted: false
+  });
+
+  const handleInputChange = (field: string, value: string | boolean) => {
+    setFormData(prev => ({ ...prev, [field]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    // Validation basique
+    if (!formData.fullName || !formData.email || !formData.phone || !formData.privacyAccepted) {
+      alert('Veuillez remplir tous les champs obligatoires et accepter la politique de confidentialité.');
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      // Simulation d'envoi de formulaire (remplacez par votre API)
+      await new Promise(resolve => setTimeout(resolve, 2000));
+      
+      // Appel du callback si fourni
+      onContactSubmit?.();
+      
+      // Redirection vers la page de devis
+      navigate('/contact/quote-request');
+      
+    } catch (error) {
+      console.error('Erreur lors de l\'envoi:', error);
+      alert('Une erreur est survenue. Veuillez réessayer.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <section className="py-8 sm:py-12 lg:py-16 bg-background">
       <div className="container mx-auto px-4 sm:px-6">
@@ -157,7 +208,10 @@ export default function ContactSection() {
                 }}
               >
                 <div className="form-container max-w-[100%]">
-                  <form className="space-y-6 sm:space-y-8">
+                  <form 
+                    className="space-y-6 sm:space-y-8"
+                    onSubmit={handleSubmit}
+                  >
                     {/* Reason for Enquiry */}
                     <div>
                       <label className="block mb-4 sm:mb-6 font-semibold text-base sm:text-lg" style={{ color: '#000000', fontFamily: 'Inter, Helvetica Neue, SF Pro Text, Segoe UI, Arial, sans-serif' }}>
@@ -166,11 +220,13 @@ export default function ContactSection() {
                       <div className="flex flex-wrap gap-2 sm:gap-3">
                         <button
                           type="button"
-                          className="px-4 sm:px-6 py-2 sm:py-3 rounded-full border border-gray-400 bg-white text-black font-medium hover:bg-gray-100 transition-colors text-sm sm:text-base"
+                          onClick={() => handleInputChange('reason', 'general_enquiry')}
+                          className={`px-4 sm:px-6 py-2 sm:py-3 rounded-full border font-medium transition-colors text-sm sm:text-base ${
+                            formData.reason === 'general_enquiry'
+                              ? 'bg-blue-600 border-blue-600 text-white'
+                              : 'border-gray-400 bg-white text-black hover:bg-gray-100'
+                          }`}
                           style={{
-                            backgroundColor: '#ffffff',
-                            border: '1px solid #9ca3af',
-                            color: '#000000',
                             fontFamily: 'Inter, Helvetica Neue, SF Pro Text, Segoe UI, Arial, sans-serif'
                           }}
                         >
@@ -178,11 +234,13 @@ export default function ContactSection() {
                         </button>
                         <button
                           type="button"
-                          className="px-4 sm:px-6 py-2 sm:py-3 rounded-full border border-gray-400 bg-white text-black font-medium hover:bg-gray-100 transition-colors text-sm sm:text-base"
+                          onClick={() => handleInputChange('reason', 'press')}
+                          className={`px-4 sm:px-6 py-2 sm:py-3 rounded-full border font-medium transition-colors text-sm sm:text-base ${
+                            formData.reason === 'press'
+                              ? 'bg-blue-600 border-blue-600 text-white'
+                              : 'border-gray-400 bg-white text-black hover:bg-gray-100'
+                          }`}
                           style={{
-                            backgroundColor: '#ffffff',
-                            border: '1px solid #9ca3af',
-                            color: '#000000',
                             fontFamily: 'Inter, Helvetica Neue, SF Pro Text, Segoe UI, Arial, sans-serif'
                           }}
                         >
@@ -190,11 +248,13 @@ export default function ContactSection() {
                         </button>
                         <button
                           type="button"
-                          className="px-4 sm:px-6 py-2 sm:py-3 rounded-full border border-gray-400 bg-white text-black font-medium hover:bg-gray-100 transition-colors text-sm sm:text-base"
+                          onClick={() => handleInputChange('reason', 'other')}
+                          className={`px-4 sm:px-6 py-2 sm:py-3 rounded-full border font-medium transition-colors text-sm sm:text-base ${
+                            formData.reason === 'other'
+                              ? 'bg-blue-600 border-blue-600 text-white'
+                              : 'border-gray-400 bg-white text-black hover:bg-gray-100'
+                          }`}
                           style={{
-                            backgroundColor: '#ffffff',
-                            border: '1px solid #9ca3af',
-                            color: '#000000',
                             fontFamily: 'Inter, Helvetica Neue, SF Pro Text, Segoe UI, Arial, sans-serif'
                           }}
                         >
@@ -212,6 +272,8 @@ export default function ContactSection() {
                         <input
                           type="text"
                           required
+                          value={formData.fullName}
+                          onChange={(e) => handleInputChange('fullName', e.target.value)}
                           className="w-full px-4 py-3 border-b-2 border-gray-400 bg-transparent focus:border-gray-600 focus:outline-none"
                           style={{ 
                             color: '#000000',
@@ -228,6 +290,8 @@ export default function ContactSection() {
                         <input
                           type="tel"
                           required
+                          value={formData.phone}
+                          onChange={(e) => handleInputChange('phone', e.target.value)}
                           className="w-full px-4 py-3 border-b-2 border-gray-400 bg-transparent focus:border-gray-600 focus:outline-none"
                           style={{ 
                             color: '#000000',
@@ -244,6 +308,8 @@ export default function ContactSection() {
                         <input
                           type="email"
                           required
+                          value={formData.email}
+                          onChange={(e) => handleInputChange('email', e.target.value)}
                           className="w-full px-4 py-3 border-b-2 border-gray-400 bg-transparent focus:border-gray-600 focus:outline-none"
                           style={{ 
                             color: '#000000',
@@ -259,6 +325,8 @@ export default function ContactSection() {
                         </label>
                         <input
                           type="text"
+                          value={formData.company}
+                          onChange={(e) => handleInputChange('company', e.target.value)}
                           className="w-full px-4 py-3 border-b-2 border-gray-400 bg-transparent focus:border-gray-600 focus:outline-none"
                           style={{ 
                             color: '#000000',
@@ -277,6 +345,8 @@ export default function ContactSection() {
                       </label>
                       <textarea
                         rows={6}
+                        value={formData.message}
+                        onChange={(e) => handleInputChange('message', e.target.value)}
                         className="w-full px-4 py-3 border-b-2 border-gray-400 bg-transparent focus:border-gray-600 focus:outline-none resize-none"
                         style={{ 
                           color: '#000000',
@@ -294,6 +364,8 @@ export default function ContactSection() {
                           <input
                             type="checkbox"
                             required
+                            checked={formData.privacyAccepted}
+                            onChange={(e) => handleInputChange('privacyAccepted', e.target.checked)}
                             className="mt-1 w-4 h-4 border-gray-400 rounded focus:ring-gray-500"
                             style={{
                               border: '1px solid #9ca3af'
@@ -313,14 +385,18 @@ export default function ContactSection() {
                       </div>
                       <button
                         type="submit"
-                        className="px-8 py-3 bg-black text-white font-semibold rounded-full hover:bg-gray-800 transition-colors"
+                        disabled={isSubmitting}
+                        className={`px-8 py-3 font-semibold rounded-full transition-colors ${
+                          isSubmitting 
+                            ? 'bg-gray-400 cursor-not-allowed' 
+                            : 'bg-black hover:bg-gray-800'
+                        }`}
                         style={{
-                          backgroundColor: '#000000',
                           color: '#ffffff',
                           fontFamily: 'Inter, Helvetica Neue, SF Pro Text, Segoe UI, Arial, sans-serif'
                         }}
                       >
-                        {t('contact.form.send_message')}
+                        {isSubmitting ? 'Envoi en cours...' : t('contact.form.send_message')}
                       </button>
                     </div>
                   </form>

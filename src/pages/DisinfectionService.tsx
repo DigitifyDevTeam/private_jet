@@ -2,10 +2,40 @@ import Header from "@/components/site/Header";
 import Footer from "@/components/site/Footer";
 import ContactSection from "@/components/site/ContactSection";
 import CircularGallery from "@/components/site/CircularGallery";
+import { FeatureSteps } from "@/components/ui/feature-steps";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const DisinfectionService = () => {
   const { t } = useLanguage();
+  
+  // Steps for disinfection process
+  const stepsFeatures = [
+    {
+      step: 'Step 1',
+      title: t('steps.disinfection.step1.title'),
+      content: t('steps.disinfection.step1.content'),
+      image: '/images/jet.png'
+    },
+    {
+      step: 'Step 2',
+      title: t('steps.disinfection.step2.title'),
+      content: t('steps.disinfection.step2.content'),
+      image: '/images/chair.png'
+    },
+    {
+      step: 'Step 3',
+      title: t('steps.disinfection.step3.title'),
+      content: t('steps.disinfection.step3.content'),
+      image: '/images/motor.png'
+    },
+    {
+      step: 'Step 4',
+      title: t('steps.disinfection.step4.title'),
+      content: t('steps.disinfection.step4.content'),
+      image: '/images/en cours.png'
+    },
+  ];
+  
   // Gallery items for disinfection services
   const galleryItems = [
     {
@@ -140,6 +170,16 @@ const DisinfectionService = () => {
               </div>
             </div>
           </div>
+        </section>
+
+        {/* Steps Section */}
+        <section className="py-8 md:py-12 bg-black">
+          <FeatureSteps 
+            features={stepsFeatures}
+            title={t('steps.title')}
+            autoPlayInterval={4000}
+            imageHeight="h-[500px]"
+          />
         </section>
 
         {/* Gallery Section */}

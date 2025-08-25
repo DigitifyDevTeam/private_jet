@@ -92,10 +92,12 @@ export default function FAQSection() {
         <div className="mt-12 sm:mt-16 lg:mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {/* FAA */}
           <div className="text-center">
-            <div className="w-16 h-16 mx-auto mb-4 bg-gray-700 rounded-full flex items-center justify-center">
-              <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2L13.09 8.26L20 9L13.09 9.74L12 16L10.91 9.74L4 9L10.91 8.26L12 2Z"/>
-              </svg>
+            <div className="w-24 h-24 mx-auto mb-6 flex items-center justify-center">
+              <img 
+                src="/images/faa.png" 
+                alt="FAA Certification" 
+                className="w-24 h-24 object-contain"
+              />
             </div>
             <h3 className="text-white text-xl font-bold mb-2 mozilla-headline-faq">FAA</h3>
             <p className="text-gray-400 text-sm mb-3 mozilla-headline-faq">CERTIFIED</p>
@@ -106,10 +108,12 @@ export default function FAQSection() {
 
           {/* ISO */}
           <div className="text-center">
-            <div className="w-16 h-16 mx-auto mb-4 bg-gray-700 rounded-full flex items-center justify-center">
-              <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2L13.09 8.26L20 9L13.09 9.74L12 16L10.91 9.74L4 9L10.91 8.26L12 2Z"/>
-              </svg>
+            <div className="w-24 h-24 mx-auto mb-4 flex items-center justify-center">
+              <img 
+                src="/images/iso.png" 
+                alt="ISO 9001:2015 Certification" 
+                className="w-24 h-24 object-contain"
+              />
             </div>
             <h3 className="text-white text-xl font-bold mb-2 mozilla-headline-faq">ISO</h3>
             <p className="text-gray-400 text-sm mb-3 mozilla-headline-faq">9001:2015</p>
@@ -120,10 +124,12 @@ export default function FAQSection() {
 
           {/* NBAA */}
           <div className="text-center">
-            <div className="w-16 h-16 mx-auto mb-4 bg-gray-700 rounded-full flex items-center justify-center">
-              <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2L13.09 8.26L20 9L13.09 9.74L12 16L10.91 9.74L4 9L10.91 8.26L12 2Z"/>
-              </svg>
+            <div className="w-24 h-24 mx-auto mb-4 flex items-center justify-center">
+              <img 
+                src="/images/nbaa-logo.png" 
+                alt="NBAA Member" 
+                className="w-16 h-16 object-contain"
+              />
             </div>
             <h3 className="text-white text-xl font-bold mb-2 mozilla-headline-faq">NBAA</h3>
             <p className="text-gray-400 text-sm mb-3 mozilla-headline-faq">MEMBER</p>

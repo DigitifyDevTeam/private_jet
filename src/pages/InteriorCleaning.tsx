@@ -2,10 +2,40 @@ import Header from "@/components/site/Header";
 import Footer from "@/components/site/Footer";
 import ContactSection from "@/components/site/ContactSection";
 import CircularGallery from "@/components/site/CircularGallery";
+import { FeatureSteps } from "@/components/ui/feature-steps";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const InteriorCleaning = () => {
   const { t } = useLanguage();
+  
+  // Steps for interior cleaning process
+  const stepsFeatures = [
+    {
+      step: 'Step 1',
+      title: t('steps.interior.step1.title'),
+      content: t('steps.interior.step1.content'),
+      image: '/images/chair.png'
+    },
+    {
+      step: 'Step 2',
+      title: t('steps.interior.step2.title'),
+      content: t('steps.interior.step2.content'),
+      image: '/images/jet.png'
+    },
+    {
+      step: 'Step 3',
+      title: t('steps.interior.step3.title'),
+      content: t('steps.interior.step3.content'),
+      image: '/images/motor.png'
+    },
+    {
+      step: 'Step 4',
+      title: t('steps.interior.step4.title'),
+      content: t('steps.interior.step4.content'),
+      image: '/images/en cours.png'
+    },
+  ];
+  
   // Gallery items for interior cleaning
   const galleryItems = [
     {
@@ -139,6 +169,16 @@ const InteriorCleaning = () => {
               </div>
             </div>
           </div>
+        </section>
+
+        {/* Steps Section */}
+        <section className="py-8 md:py-12 bg-black">
+          <FeatureSteps 
+            features={stepsFeatures}
+            title={t('steps.title')}
+            autoPlayInterval={4000}
+            imageHeight="h-[500px]"
+          />
         </section>
 
         {/* Gallery Section */}
