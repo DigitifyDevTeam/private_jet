@@ -136,16 +136,16 @@ export default function ExperienceSection() {
           {visibleServices.map((service, index) => {
             const IconComponent = service.icon;
             return (
-              <div key={index} className="bg-white/80 backdrop-blur-md rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 text-black transition-all duration-300 hover:scale-105">
-                                  <div className="mb-4 sm:mb-6">
-                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gray-200 rounded-full flex items-center justify-center mb-3 sm:mb-4">
-                      <IconComponent className="h-5 w-5 sm:h-6 sm:w-6 text-gray-700" />
-                    </div>
-                    <h3 className="text-lg sm:text-xl lg:text-2xl mb-3 sm:mb-4 font-semibold text-black">{service.title}</h3>
-                    <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
-                      {service.description}
-                    </p>
+              <div key={index} className="bg-white/80 backdrop-blur-md rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 text-black transition-all duration-300 hover:scale-105 h-[280px] sm:h-[320px] lg:h-[360px] flex flex-col">
+                <div className="flex-1">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gray-200 rounded-full flex items-center justify-center mb-3 sm:mb-4">
+                    <IconComponent className="h-5 w-5 sm:h-6 sm:w-6 text-gray-700" />
                   </div>
+                  <h3 className="text-lg sm:text-xl lg:text-2xl mb-3 sm:mb-4 font-semibold text-black">{service.title}</h3>
+                  <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
+                    {service.description}
+                  </p>
+                </div>
               </div>
             );
           })}

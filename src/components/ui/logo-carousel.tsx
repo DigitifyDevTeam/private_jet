@@ -12,7 +12,7 @@ import { AnimatePresence, motion } from "framer-motion"
 interface Logo {
   name: string
   id: number
-  img: React.ComponentType<React.SVGProps<SVGSVGElement>>
+  img: React.ComponentType<React.SVGProps<SVGSVGElement>> | React.ComponentType<React.ImgHTMLAttributes<HTMLImageElement>>
 }
 
 interface LogoColumnProps {
@@ -104,9 +104,11 @@ const LogoColumn: React.FC<LogoColumnProps> = React.memo(
   }
 )
 
+LogoColumn.displayName = "LogoColumn"
+
 interface LogoCarouselProps {
-  columnCount?: number
   logos: Logo[]
+  columnCount?: number
 }
 
 export function LogoCarousel({ columnCount = 2, logos }: LogoCarouselProps) {
@@ -114,17 +116,16 @@ export function LogoCarousel({ columnCount = 2, logos }: LogoCarouselProps) {
   const [currentTime, setCurrentTime] = useState(0)
 
   const updateTime = useCallback(() => {
-    setCurrentTime((prevTime) => prevTime + 100)
+    setCurrentTime((prev) => prev + 50)
   }, [])
 
   useEffect(() => {
-    const intervalId = setInterval(updateTime, 100)
-    return () => clearInterval(intervalId)
+    const interval = setInterval(updateTime, 50)
+    return () => clearInterval(interval)
   }, [updateTime])
 
   useEffect(() => {
-    const distributedLogos = distributeLogos(logos, columnCount)
-    setLogoSets(distributedLogos)
+    setLogoSets(distributeLogos(logos, columnCount))
   }, [logos, columnCount])
 
   return (
