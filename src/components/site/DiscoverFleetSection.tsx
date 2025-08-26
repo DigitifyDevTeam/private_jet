@@ -68,7 +68,8 @@ export default function DiscoverFleetSection() {
                   style={{
                     color: '#ffffff',
                     fontSize: '36px',
-                    lineHeight: '40px'
+                    lineHeight: '40px',
+                    fontFamily: '"Mozilla Headline", serif'
                   }}
                 >
                   {t('fleet.private_jet')}
@@ -111,7 +112,8 @@ export default function DiscoverFleetSection() {
                   style={{
                     color: '#ffffff',
                     fontSize: '36px',
-                    lineHeight: '40px'
+                    lineHeight: '40px',
+                    fontFamily: '"Mozilla Headline", serif'
                   }}
                 >
                   {t('fleet.vip_airliner')}
@@ -154,7 +156,8 @@ export default function DiscoverFleetSection() {
                   style={{
                     color: '#ffffff',
                     fontSize: '36px',
-                    lineHeight: '40px'
+                    lineHeight: '40px',
+                    fontFamily: '"Mozilla Headline", serif'
                   }}
                 >
                   {t('fleet.commercial_vip')}
