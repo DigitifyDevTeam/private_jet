@@ -90,7 +90,7 @@ const translations = {
     'common.request_quote': 'Demander un devis',
     
     // FAQ
-    'faq.title': 'Frequent Asked Question',
+    'faq.title': 'Questions fréquemment posées',
     'faq.questions': 'Questions',
     'faq.1.question': 'Quels services de nettoyage d\'avion AeroLustre fournit-il ?',
     'faq.1.answer': 'AeroLustre offre des services complets de nettoyage d\'avion incluant le nettoyage approfondi intérieur, le lavage et cirage extérieur, le nettoyage moteur, le nettoyage cockpit et la protection spécialisée de peinture. Nos services couvrent tout, de la restauration complète d\'avion, garantissant que votre avion maintient son apparence immaculée et ses performances optimales.',
