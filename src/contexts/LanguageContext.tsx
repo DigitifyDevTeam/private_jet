@@ -41,11 +41,7 @@ const translations = {
     // Contact
     'contact.whatsapp': 'WhatsApp',
     'contact.phone_24h': 'Ligne téléphonique ouverte 24h/24',
-<<<<<<< HEAD
     'contact.call_24_7': 'Appeler 24/7',
-=======
-    'contact.call_24_7': 'Appel 24/7',
->>>>>>> 3cadf516f5b3711d136518dc4b091669ffa8762d
     'contact.get_quote': 'Demander un devis',
     
     // Footer
