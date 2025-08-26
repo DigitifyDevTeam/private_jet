@@ -92,17 +92,17 @@ export default function FAQSection() {
         <div className="mt-12 sm:mt-16 lg:mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {/* FAA */}
           <div className="text-center">
-            <div className="w-24 h-24 mx-auto mb-6 flex items-center justify-center">
+            <div className="w-24 h-24 mx-auto mb-4 flex items-center justify-center">
               <img 
                 src="/images/faa.png" 
                 alt="FAA Certification" 
-                className="w-24 h-24 object-contain"
+                className="w-20 h-20 object-contain"
               />
             </div>
             <h3 className="text-white text-xl font-bold mb-2 mozilla-headline-faq">FAA</h3>
             <p className="text-gray-400 text-sm mb-3 mozilla-headline-faq">CERTIFIED</p>
             <p className="text-gray-300 text-sm leading-relaxed" style={{ fontFamily: 'Inter, Helvetica Neue, SF Pro Text, Segoe UI, Arial, sans-serif' }}>
-              Federal Aviation Administration certified maintenance facility, ensuring all services meet the highest safety and quality standards.
+              Federal Aviation Administration certified facility, ensuring all services meet the highest safety and quality standards.
             </p>
           </div>
 

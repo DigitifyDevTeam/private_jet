@@ -74,9 +74,9 @@ export default function AboutUsSection() {
     {
       icon: <Wrench className="w-6 h-6" />,
       secondaryIcon: <Sparkles className="w-4 h-4 absolute -top-1 -right-1 text-white" />,
-      title: "Maintenance",
+      title: "Nettoyage",
       description:
-        "Expert aircraft maintenance services ensuring your aircraft operates at peak performance. Our certified technicians provide comprehensive care and attention to every detail.",
+        "Expert aircraft cleaning services ensuring your aircraft maintains peak appearance. Our certified technicians provide comprehensive care and attention to every detail.",
       position: "left",
     },
     {
@@ -108,7 +108,7 @@ export default function AboutUsSection() {
       secondaryIcon: <CheckCircle className="w-4 h-4 absolute -top-1 -right-1 text-white" />,
       title: "Expertise",
       description:
-        "Years of experience in aircraft maintenance and detailing. Our team of professionals brings unparalleled expertise to every project.",
+        "Years of experience in aircraft cleaning and detailing. Our team of professionals brings unparalleled expertise to every project.",
       position: "right",
     },
     {

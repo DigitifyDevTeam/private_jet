@@ -25,7 +25,7 @@ const Contact = () => {
                 {t('section.contact')}
               </h1>
               <p className="text-gray-300 text-lg max-w-3xl mx-auto">
-                Get in touch with AeroLustre for all your aircraft maintenance and detailing needs. Our team is ready to provide you with exceptional service and support.
+                Get in touch with AeroLustre for all your aircraft detailing needs. Our team is ready to provide you with exceptional service and support.
               </p>
             </div>
           </section>

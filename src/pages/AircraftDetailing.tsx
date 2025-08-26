@@ -206,7 +206,7 @@ const AircraftDetailing = () => {
         </section>
 
         {/* Contact Section */}
-        <ContactSection />
+        <ContactSection showTitle={true} />
       </main>
       
       <Footer />

@@ -70,7 +70,7 @@ export function AirportsSection() {
           <h2 className="text-4xl md:text-5xl text-white mb-6 font-bold" style={{ fontFamily: '"Mozilla Headline", sans-serif', fontWeight: 600 }}>
             {t('airports.title')}
           </h2>
-          <p className="text-gray-400 text-lg max-w-3xl mx-auto leading-relaxed font-medium" style={{ fontFamily: '"Mozilla Headline", sans-serif', fontWeight: 400 }}>
+          <p className="text-gray-400 text-lg max-w-3xl mx-auto leading-relaxed font-medium" style={{ fontFamily: 'Inter, "Helvetica Neue", "SF Pro Text", "Segoe UI", Arial, sans-serif', fontWeight: 400 }}>
             {t('airports.description')}
           </p>
         </div>

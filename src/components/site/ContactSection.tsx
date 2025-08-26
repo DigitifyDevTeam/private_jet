@@ -5,9 +5,10 @@ import { useNavigate } from "react-router-dom";
 
 interface ContactSectionProps {
   onContactSubmit?: () => void;
+  showTitle?: boolean;
 }
 
-export default function ContactSection({ onContactSubmit }: ContactSectionProps) {
+export default function ContactSection({ onContactSubmit, showTitle = false }: ContactSectionProps) {
   const { t } = useLanguage();
   const navigate = useNavigate();
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -58,6 +59,16 @@ export default function ContactSection({ onContactSubmit }: ContactSectionProps)
     <section className="py-8 sm:py-12 lg:py-16 bg-background">
       <div className="container mx-auto px-4 sm:px-6">
         <Reveal>
+          {showTitle && (
+            <div className="text-center mb-12">
+              <h2 
+                className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-6"
+                style={{ fontFamily: '"Mozilla Headline", serif' }}
+              >
+                Accédez à votre service personnalisé en remplissant ce formulaire
+              </h2>
+            </div>
+          )}
           <div 
             className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-7"
             style={{
@@ -223,7 +234,7 @@ export default function ContactSection({ onContactSubmit }: ContactSectionProps)
                           onClick={() => handleInputChange('reason', 'general_enquiry')}
                           className={`px-4 sm:px-6 py-2 sm:py-3 rounded-full border font-medium transition-colors text-sm sm:text-base ${
                             formData.reason === 'general_enquiry'
-                              ? 'bg-blue-600 border-blue-600 text-white'
+                              ? 'bg-gray-600 border-gray-600 text-white'
                               : 'border-gray-400 bg-white text-black hover:bg-gray-100'
                           }`}
                           style={{
@@ -237,7 +248,7 @@ export default function ContactSection({ onContactSubmit }: ContactSectionProps)
                           onClick={() => handleInputChange('reason', 'press')}
                           className={`px-4 sm:px-6 py-2 sm:py-3 rounded-full border font-medium transition-colors text-sm sm:text-base ${
                             formData.reason === 'press'
-                              ? 'bg-blue-600 border-blue-600 text-white'
+                              ? 'bg-gray-600 border-gray-600 text-white'
                               : 'border-gray-400 bg-white text-black hover:bg-gray-100'
                           }`}
                           style={{
@@ -251,7 +262,7 @@ export default function ContactSection({ onContactSubmit }: ContactSectionProps)
                           onClick={() => handleInputChange('reason', 'other')}
                           className={`px-4 sm:px-6 py-2 sm:py-3 rounded-full border font-medium transition-colors text-sm sm:text-base ${
                             formData.reason === 'other'
-                              ? 'bg-blue-600 border-blue-600 text-white'
+                              ? 'bg-gray-600 border-gray-600 text-white'
                               : 'border-gray-400 bg-white text-black hover:bg-gray-100'
                           }`}
                           style={{

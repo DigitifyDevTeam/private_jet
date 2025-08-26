@@ -49,11 +49,26 @@ export default function QuoteRequestForm() {
   };
 
   const handleServiceToggle = (service: string) => {
-    setSelectedServices(prev => 
-      prev.includes(service) 
-        ? prev.filter(s => s !== service)
-        : [...prev, service]
-    );
+    setSelectedServices(prev => {
+      // If clicking on "complete" service
+      if (service === 'complete') {
+        // If already selected, deselect it
+        if (prev.includes(service)) {
+          return prev.filter(s => s !== service);
+        }
+        // If not selected, select only "complete" and deselect others
+        return ['complete'];
+      }
+      
+      // If clicking on other services
+      if (prev.includes(service)) {
+        // Deselect the service
+        return prev.filter(s => s !== service);
+      } else {
+        // Select the service, but remove "complete" if it was selected
+        return [...prev.filter(s => s !== 'complete'), service];
+      }
+    });
   };
 
   const handleAdditionalServiceToggle = (service: string) => {
@@ -74,48 +89,48 @@ export default function QuoteRequestForm() {
               {/* Aircraft Information */}
               <div className="space-y-4">
                 <h3 className="text-2xl font-bold text-black mb-4" style={{ fontFamily: '"Mozilla Headline", sans-serif' }}>
-                  Informations sur l'avion
+                  {t('quote.aircraft_information')}
                 </h3>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {/* Aircraft Type */}
                   <div>
                     <label className="block mb-3 font-semibold text-black">
-                      Marque de l'appareil <span className="text-red-500">*</span>
+                      {t('quote.aircraft_brand')} <span className="text-red-500">*</span>
                     </label>
                     <select 
                       value={selectedAircraftBrand}
                       onChange={(e) => handleBrandChange(e.target.value)}
-                      className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-gray-600 focus:outline-none bg-white text-black"
+                      className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-gray-600 focus:outline-none bg-white text-black hover:border-gray-400"
                     >
-                      <option value="">Marque de l'appareil</option>
-                      <option value="gulfstream">✈️ Gulfstream</option>
-                      <option value="bombardier">✈️ Bombardier</option>
-                      <option value="dassault">✈️ Dassault Aviation</option>
-                      <option value="cessna">✈️ Cessna</option>
-                      <option value="embraer">✈️ Embraer</option>
-                      <option value="hondajet">✈️ HondaJet</option>
-                      <option value="other">Autre marque</option>
+                      <option value="">{t('quote.aircraft_brand.select')}</option>
+                      <option value="gulfstream">{t('quote.aircraft_brand.gulfstream')}</option>
+                      <option value="bombardier">{t('quote.aircraft_brand.bombardier')}</option>
+                      <option value="dassault">{t('quote.aircraft_brand.dassault')}</option>
+                      <option value="cessna">{t('quote.aircraft_brand.cessna')}</option>
+                      <option value="embraer">{t('quote.aircraft_brand.embraer')}</option>
+                      <option value="hondajet">{t('quote.aircraft_brand.hondajet')}</option>
+                      <option value="other">{t('quote.aircraft_brand.other')}</option>
                     </select>
                   </div>
 
                   {/* Aircraft Model */}
                   <div>
                     <label className="block mb-3 font-semibold text-black">
-                      Modèle de l'appareil <span className="text-red-500">*</span>
+                      {t('quote.aircraft_model_label')} <span className="text-red-500">*</span>
                     </label>
                     <select 
                       value={selectedAircraftModel}
                       onChange={(e) => setSelectedAircraftModel(e.target.value)}
-                      className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-gray-600 focus:outline-none bg-white text-black"
+                      className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-gray-600 focus:outline-none bg-white text-black hover:border-gray-400"
                       disabled={!selectedAircraftBrand || selectedAircraftBrand === 'other'}
                     >
                       <option value="">
                         {!selectedAircraftBrand 
-                          ? "Sélectionnez d'abord une marque" 
+                          ? t('quote.aircraft_model.select_brand_first')
                           : selectedAircraftBrand === 'other' 
-                            ? "Autre marque" 
-                            : "Sélectionner un modèle"
+                            ? t('quote.aircraft_model.other_brand')
+                            : t('quote.aircraft_model.select_model')
                         }
                       </option>
                       {selectedAircraftBrand && selectedAircraftBrand !== 'other' && 
@@ -133,7 +148,7 @@ export default function QuoteRequestForm() {
               {/* Service Information */}
               <div className="space-y-6">
                 <h3 className="text-2xl font-bold text-black mb-6" style={{ fontFamily: '"Mozilla Headline", sans-serif' }}>
-                  Services demandés
+                  {t('quote.services_requested')}
                 </h3>
 
                 {/* Service Type */}
@@ -154,7 +169,7 @@ export default function QuoteRequestForm() {
                         onClick={() => handleServiceToggle(service.key)}
                         className={`px-4 py-3 rounded-lg border-2 font-medium transition-colors ${
                           selectedServices.includes(service.key)
-                            ? 'bg-blue-600 border-blue-600 text-white'
+                            ? 'bg-gray-600 border-gray-600 text-white'
                             : 'bg-white border-gray-300 text-black hover:border-gray-400'
                         }`}
                       >
@@ -183,7 +198,7 @@ export default function QuoteRequestForm() {
                         onClick={() => handleAdditionalServiceToggle(service.key)}
                         className={`px-4 py-3 rounded-lg border-2 font-medium transition-colors text-sm ${
                           selectedAdditionalServices.includes(service.key)
-                            ? 'bg-green-600 border-green-600 text-white'
+                            ? 'bg-gray-600 border-gray-600 text-white'
                             : 'bg-white border-gray-300 text-black hover:border-gray-400'
                         }`}
                       >
@@ -197,7 +212,7 @@ export default function QuoteRequestForm() {
               {/* Scheduling & Urgency */}
               <div className="space-y-6">
                 <h3 className="text-2xl font-bold text-black mb-6" style={{ fontFamily: '"Mozilla Headline", sans-serif' }}>
-                  Planification et urgence
+                  {t('quote.scheduling_urgency')}
                 </h3>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -206,7 +221,7 @@ export default function QuoteRequestForm() {
                     <label className="block mb-3 font-semibold text-black">
                       {t('quote.urgency')} <span className="text-red-500">*</span>
                     </label>
-                    <select className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-gray-600 focus:outline-none bg-white text-black">
+                    <select className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-gray-600 focus:outline-none bg-white text-black hover:border-gray-400">
                       <option value="">{t('quote.urgency')}</option>
                       <option value="low">{t('quote.urgency.low')}</option>
                       <option value="medium">{t('quote.urgency.medium')}</option>
@@ -222,8 +237,8 @@ export default function QuoteRequestForm() {
                     </label>
                     <input
                       type="text"
-                      className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-gray-600 focus:outline-none bg-white text-black"
-                      placeholder="ex: Paris-Charles de Gaulle (CDG)"
+                      className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-gray-600 focus:outline-none bg-white text-black hover:border-gray-400"
+                      placeholder={t('quote.airport_placeholder')}
                     />
                   </div>
 
@@ -234,7 +249,7 @@ export default function QuoteRequestForm() {
                     </label>
                     <input
                       type="date"
-                      className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-gray-600 focus:outline-none bg-white text-black"
+                      className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-gray-600 focus:outline-none bg-white text-black hover:border-gray-400"
                     />
                   </div>
 
@@ -245,7 +260,7 @@ export default function QuoteRequestForm() {
                     </label>
                     <input
                       type="time"
-                      className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-gray-600 focus:outline-none bg-white text-black"
+                      className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-gray-600 focus:outline-none bg-white text-black hover:border-gray-400"
                     />
                   </div>
 
@@ -254,7 +269,7 @@ export default function QuoteRequestForm() {
                     <label className="block mb-3 font-semibold text-black">
                       {t('quote.contact_preference')}
                     </label>
-                    <select className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-gray-600 focus:outline-none bg-white text-black">
+                    <select className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-gray-600 focus:outline-none bg-white text-black hover:border-gray-400">
                       <option value="">{t('quote.contact_preference')}</option>
                       <option value="phone">{t('quote.contact_preference.phone')}</option>
                       <option value="email">{t('quote.contact_preference.email')}</option>
@@ -271,8 +286,8 @@ export default function QuoteRequestForm() {
                   </label>
                   <textarea
                     rows={4}
-                    className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-gray-600 focus:outline-none bg-white text-black resize-none"
-                    placeholder="Décrivez vos exigences spéciales, contraintes ou demandes particulières..."
+                    className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-gray-600 focus:outline-none bg-white text-black resize-none hover:border-gray-400"
+                    placeholder={t('quote.special_requirements_placeholder')}
                   ></textarea>
                 </div>
               </div>

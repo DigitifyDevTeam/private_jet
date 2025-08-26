@@ -138,7 +138,7 @@ export function TrustSection() {
   const { t } = useLanguage();
   
   return (
-    <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-gray-50 dark:bg-gray-900">
+    <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-black">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-4xl md:text-5xl mb-4 font-bold" style={{ fontFamily: '"Mozilla Headline", sans-serif', fontWeight: 600 }}>

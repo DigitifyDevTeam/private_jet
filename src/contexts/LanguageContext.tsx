@@ -26,7 +26,7 @@ const translations = {
     
     // Home page
     'hero.title': 'Nettoyage d\'Avion Privé, Perfectionné.',
-    'hero.subtitle': 'Découvrez l\'excellence en matière de maintenance et de nettoyage d\'avions privés avec AeroLustre.',
+    'hero.subtitle': 'Découvrez l\'excellence en nettoyage d\'avions privés avec AeroLustre.',
     'hero.cta': 'Demander un devis',
     
     // Sections
@@ -53,12 +53,12 @@ const translations = {
 
     
     // Fleet
-    'fleet.private_jet': 'Jet Privé',
-    'fleet.vip_airliner': 'Avion VIP',
-    'fleet.commercial_vip': 'VIP Commercial',
-    'fleet.private_jet_desc': 'Découvrez l\'apogée du voyage aérien avec notre flotte exceptionnelle de jets lourds. Nos distingués Legacy 600 et Challenger 850 ont été spécialement conçus pour offrir un confort et une commodité inégalés pour les routes courtes à moyennes. Que vous voyagiez pour affaires ou loisirs, ces jets répondent à tous vos besoins, garantissant une expérience unique.',
-    'fleet.vip_airliner_desc': 'Plongez dans le monde du luxe avec notre service d\'avion VIP. Nos cabines spacieuses offrent des sièges premium avec des panneaux en bois foncé, des allées larges et des systèmes de divertissement de pointe. Parfait pour les grands groupes recherchant l\'ultime en confort et style pour les voyages long-courrier.',
-    'fleet.commercial_vip_desc': 'Notre service VIP commercial combine sophistication et efficacité. Idéal pour les voyages d\'affaires, nos cabines offrent un environnement professionnel avec des équipements de pointe et un service personnalisé pour répondre aux besoins exigeants des voyageurs d\'affaires.',
+    'fleet.private_jet': 'Nettoyage intérieur haut de gamme',
+    'fleet.vip_airliner': 'Detaling extérieur et protection',
+    'fleet.commercial_vip': 'Service cabine VIP & expérience passager',
+    'fleet.private_jet_desc': 'Désinfection et entretien complet de la cabine (cuir, tissus, moquettes, bois, métaux précieux). Traitement anti-bactérien et neutralisation des odeurs. Restauration et protection des surfaces premium (sièges en cuir, boiseries, inox, marqueterie).',
+    'fleet.vip_airliner_desc': 'Lavage minutieux de la carlingue, réacteurs, verrières et train d\'atterrissage. Polissage et application de revêtements protecteurs (céramique, cire aviation) pour améliorer l\'aérodynamisme et préserver la peinture. Nettoyage spécifique des zones sensibles (entrée d\'air, ailettes, trappes).',
+    'fleet.commercial_vip_desc': 'Mise en configuration de la cabine avant chaque vol (nettoyage final, mise en place des équipements, recharge des consommables). Détails premium : linge et accessoires impeccables, sélection de produits haut de gamme à bord (boissons, parfums d\'ambiance, kits de confort). Assistance personnalisée en coordination avec l\'équipage pour garantir une expérience de voyage exclusive et sans compromis.',
     'fleet.discover_more': 'Découvrir Plus',
     
 
@@ -77,10 +77,10 @@ const translations = {
     'experience.aircraft_detailing_desc': 'Notre équipe d\'experts fournit des services complets de nettoyage d\'avions, garantissant que votre avion maintient son apparence immaculée avec des soins de qualité musée et une attention aux détails.',
     'experience.safety_maintenance_desc': 'Nous fournissons des services de maintenance de sécurité méticuleux avec les plus hauts standards de l\'industrie, garantissant que votre avion fonctionne à des niveaux de performance et de sécurité optimaux.',
     'experience.premium_care_desc': 'Découvrez nos services de soins d\'avions premium, avec des techniques de nettoyage avancées et des matériaux de qualité luxe pour maintenir l\'état exceptionnel de votre avion.',
-    'experience.expert_team_desc': 'Nos professionnels certifiés apportent des années d\'expertise en aviation, fournissant des connaissances et compétences spécialisées pour tous vos besoins de maintenance et nettoyage d\'avions.',
+    'experience.expert_team_desc': 'Nos professionnels certifiés apportent des années d\'expertise en aviation, fournissant des connaissances et compétences spécialisées pour tous vos besoins de nettoyage d\'avions.',
     'experience.support_24_7_desc': 'Support 24h/24 et services d\'urgence, garantissant que vos besoins de maintenance d\'avions sont satisfaits quand et où vous avez besoin de notre expertise.',
     'experience.quality_assurance_desc': 'Processus de contrôle qualité rigoureux et inspections détaillées garantissent que chaque service répond aux plus hauts standards d\'excellence et de fiabilité.',
-    'experience.custom_solutions_desc': 'Solutions de maintenance et nettoyage personnalisées conçues spécifiquement pour votre type d\'avion, garantissant des résultats optimaux et une performance durable.',
+    'experience.custom_solutions_desc': 'Solutions de nettoyage personnalisées conçues spécifiquement pour votre type d\'avion, garantissant des résultats optimaux et une performance durable.',
     'experience.interior_refinement_desc': 'Services spécialisés de nettoyage et rénovation intérieurs, restaurant la cabine de votre avion à ses standards de luxe et confort originaux.',
     'experience.exterior_excellence_desc': 'Services professionnels de nettoyage extérieur et protection de peinture, maintenant l\'apparence élégante de votre avion et protégeant l\'intégrité de sa surface.',
     
@@ -93,13 +93,13 @@ const translations = {
     'faq.title': 'Questions fréquemment posées',
     'faq.questions': 'Questions',
     'faq.1.question': 'Quels services de nettoyage d\'avion AeroLustre fournit-il ?',
-    'faq.1.answer': 'AeroLustre offre des services complets de nettoyage d\'avion incluant le nettoyage approfondi intérieur, le lavage et cirage extérieur, le nettoyage moteur, le nettoyage cockpit et la protection spécialisée de peinture. Nos services couvrent tout, de la maintenance routinière à la restauration complète d\'avion, garantissant que votre avion maintient son apparence immaculée et ses performances optimales.',
+    'faq.1.answer': 'AeroLustre offre des services complets de nettoyage d\'avion incluant le nettoyage approfondi intérieur, le lavage et cirage extérieur, le nettoyage moteur, le nettoyage cockpit et la protection spécialisée de peinture. Nos services couvrent tout, de la restauration complète d\'avion, garantissant que votre avion maintient son apparence immaculée et ses performances optimales.',
     'faq.2.question': 'Combien de temps prend un service typique de nettoyage d\'avion ?',
     'faq.2.answer': 'La durée du service varie selon la taille de l\'avion et le niveau de service. Un lavage extérieur de base prend généralement 2-3 heures, tandis qu\'un service complet de nettoyage intérieur et extérieur peut prendre 6-8 heures pour les petits avions et jusqu\'à 24 heures pour les gros jets. Nous fournissons des estimations de temps détaillées lors de la consultation et pouvons accommoder les demandes urgentes quand possible.',
     'faq.3.question': 'Quelles certifications de sécurité AeroLustre maintient-il ?',
     'faq.3.answer': 'AeroLustre maintient les plus hautes certifications de sécurité de l\'industrie incluant IS-BAO Stage 2, la notation ARGUS Platinum et les standards de conformité FAA. Notre équipe se compose de professionnels de l\'aviation certifiés avec une formation extensive en maintenance d\'avion, protocoles de sécurité et meilleures pratiques de l\'industrie pour garantir que votre avion reçoit les soins de la plus haute qualité.',
-    'faq.4.question': 'Fournissez-vous des services de maintenance d\'urgence ?',
-    'faq.4.answer': 'Oui, AeroLustre offre des services de maintenance et nettoyage d\'urgence 24h/24. Notre équipe de réponse rapide est disponible 24h/24 pour gérer les besoins urgents de maintenance d\'avion, garantissant un temps d\'arrêt minimal et une sécurité maximale. Nous maintenons des protocoles d\'urgence et pouvons déployer des équipes à votre emplacement en quelques heures pour les situations critiques.',
+    'faq.4.question': 'Fournissez-vous des services de nettoyage d\'urgence ?',
+    'faq.4.answer': 'Oui, AeroLustre offre des services de nettoyage d\'urgence 24h/24. Notre équipe de réponse rapide est disponible 24h/24 pour gérer les besoins urgents de nettoyage d\'avion, garantissant un temps d\'arrêt minimal et une sécurité maximale. Nous maintenons des protocoles d\'urgence et pouvons déployer des équipes à votre emplacement en quelques heures pour les situations critiques.',
     
     // Experience Section
     'experience.section_title': 'Expérience',
@@ -107,12 +107,12 @@ const translations = {
     'experience.discover_more': 'Découvrir Plus',
     
     // Trust Section
-    'trust.title': 'Qui fait notre confiance',
+    'trust.title': 'Ils nous font confiance',
     'trust.description': 'Nous travaillons avec les plus grandes marques de l\'aviation privée pour garantir des services de qualité exceptionnelle.',
     
     // Airports Section
     'airports.title': 'Nous intervenons aux aéroports suivants',
-    'airports.description': 'AeroLustre opère dans les principaux aéroports internationaux, offrant des services de maintenance et de nettoyage d\'avions privés de qualité exceptionnelle.',
+    'airports.description': 'AeroLustre opère dans les principaux aéroports internationaux, offrant des services de nettoyage d\'avions privés de qualité exceptionnelle.',
     'airports.cta_text': 'Besoin de nos services dans un autre aéroport ?',
     'airports.cta_button': 'Contactez-nous',
     
@@ -120,8 +120,8 @@ const translations = {
     'contact.whatsapp_description': 'Gérez vos demandes et réservations en déplacement via chat privé avec notre équipe',
     'contact.phone_24h_description': 'Ligne téléphonique ouverte 24h/24',
     'contact.form.reason_label': 'Veuillez sélectionner la raison de votre demande',
-    'contact.form.general_enquiry': 'Demande générale',
-    'contact.form.press': 'Presse',
+    'contact.form.general_enquiry': 'Renseignement',
+    'contact.form.press': 'Prestashop',
     'contact.form.other': 'Autre',
     'contact.form.full_name': 'Nom complet',
     'contact.form.phone': 'Numéro de téléphone',
@@ -201,6 +201,26 @@ const translations = {
     'quote.contact_preference.any': 'N\'importe lequel',
     'quote.send_quote_request': 'Demander un devis',
     
+    // Quote Form Sections
+    'quote.aircraft_information': 'Informations sur l\'avion',
+    'quote.aircraft_brand': 'Marque de l\'appareil',
+    'quote.aircraft_brand.select': 'Marque de l\'appareil',
+    'quote.aircraft_brand.gulfstream': '✈️ Gulfstream',
+    'quote.aircraft_brand.bombardier': '✈️ Bombardier',
+    'quote.aircraft_brand.dassault': '✈️ Dassault Aviation',
+    'quote.aircraft_brand.cessna': '✈️ Cessna',
+    'quote.aircraft_brand.embraer': '✈️ Embraer',
+    'quote.aircraft_brand.hondajet': '✈️ HondaJet',
+    'quote.aircraft_brand.other': 'Autre marque',
+    'quote.aircraft_model_label': 'Modèle de l\'appareil',
+    'quote.aircraft_model.select_brand_first': 'Sélectionnez d\'abord une marque',
+    'quote.aircraft_model.other_brand': 'Autre marque',
+    'quote.aircraft_model.select_model': 'Sélectionner un modèle',
+    'quote.services_requested': 'Services demandés',
+    'quote.scheduling_urgency': 'Planification et urgence',
+    'quote.airport_placeholder': 'ex: Paris-Charles de Gaulle (CDG)',
+    'quote.special_requirements_placeholder': 'Décrivez vos exigences spéciales, contraintes ou demandes particulières...',
+    
     'contact.founder.title': 'Fondateur',
     'contact.founder.welcome': 'Bienvenue chez AeroLustre, où l\'excellence et la sophistication se rencontrent dans l\'aviation privée.',
     'contact.founder.commitment': 'Nous nous engageons à dépasser vos attentes',
@@ -208,7 +228,7 @@ const translations = {
     'contact.founder.meet': 'Rencontrer le fondateur d\'AEROLUSTRE',
     
     // Footer
-    'footer.description': 'Services professionnels de maintenance et nettoyage d\'avions. Nous fournissons des soins complets pour votre avion avec les plus hauts standards de qualité et de sécurité.',
+    'footer.description': 'Services professionnels de nettoyage d\'avions. Nous fournissons des soins complets pour votre avion avec les plus hauts standards de qualité et de sécurité.',
     'footer.support_available': 'Support disponible 24h/24',
     'footer.aircraft_detailing': 'Nettoyage d\'avion',
     'footer.safety_maintenance': 'Maintenance de sécurité',
@@ -420,9 +440,9 @@ const translations = {
     'contact.whatsapp_description': 'Manage your enquiries and bookings on the go via private chat with our team',
     'contact.phone_24h_description': 'Telephone line open 24 hours a day',
     'contact.form.reason_label': 'Please select the reason for your enquiry',
-    'contact.form.general_enquiry': 'General Enquiry',
-    'contact.form.press': 'Press',
-    'contact.form.other': 'Other',
+    'contact.form.general_enquiry': 'Renseignement',
+    'contact.form.press': 'Prestashop',
+    'contact.form.other': 'Autre',
     'contact.form.full_name': 'Full Name',
     'contact.form.phone': 'Phone Number',
     'contact.form.email': 'Email Address',
@@ -500,6 +520,26 @@ const translations = {
     'quote.contact_preference.whatsapp': 'WhatsApp',
     'quote.contact_preference.any': 'Any',
     'quote.send_quote_request': 'Request Quote',
+    
+    // Quote Form Sections
+    'quote.aircraft_information': 'Aircraft Information',
+    'quote.aircraft_brand': 'Aircraft Brand',
+    'quote.aircraft_brand.select': 'Aircraft Brand',
+    'quote.aircraft_brand.gulfstream': '✈️ Gulfstream',
+    'quote.aircraft_brand.bombardier': '✈️ Bombardier',
+    'quote.aircraft_brand.dassault': '✈️ Dassault Aviation',
+    'quote.aircraft_brand.cessna': '✈️ Cessna',
+    'quote.aircraft_brand.embraer': '✈️ Embraer',
+    'quote.aircraft_brand.hondajet': '✈️ HondaJet',
+    'quote.aircraft_brand.other': 'Other Brand',
+    'quote.aircraft_model_label': 'Aircraft Model',
+    'quote.aircraft_model.select_brand_first': 'Select a brand first',
+    'quote.aircraft_model.other_brand': 'Other Brand',
+    'quote.aircraft_model.select_model': 'Select a model',
+    'quote.services_requested': 'Requested Services',
+    'quote.scheduling_urgency': 'Scheduling & Urgency',
+    'quote.airport_placeholder': 'e.g.: Paris-Charles de Gaulle (CDG)',
+    'quote.special_requirements_placeholder': 'Describe your special requirements, constraints or specific requests...',
     
     'contact.founder.title': 'Founder',
     'contact.founder.welcome': 'Welcome to AeroLustre, where excellence and sophistication meet in private aviation.',

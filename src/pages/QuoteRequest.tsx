@@ -22,10 +22,10 @@ const QuoteRequest = () => {
           <section className="relative py-32 md:py-40 bg-background">
             <div className="container mx-auto px-4 text-center">
               <h1 className="text-white mb-8" style={{ fontSize: '4.5rem', fontFamily: '"Mozilla Headline", sans-serif' }}>
-                Demander un devis
+                {t('quote.title')}
               </h1>
               <p className="text-gray-300 text-lg max-w-3xl mx-auto">
-                Remplissez ce formulaire pour recevoir un devis personnalisé pour vos services de maintenance et de nettoyage d'avion privé.
+                {t('quote.subtitle')}
               </p>
             </div>
           </section>

@@ -14,24 +14,9 @@ export default function ExperienceSection() {
       description: t('experience.aircraft_detailing_desc')
     },
     {
-      icon: Shield,
-      title: t('experience.safety_maintenance'),
-      description: t('experience.safety_maintenance_desc')
-    },
-    {
-      icon: Star,
-      title: t('experience.premium_care'),
-      description: t('experience.premium_care_desc')
-    },
-    {
       icon: Users,
       title: t('experience.expert_team'),
       description: t('experience.expert_team_desc')
-    },
-    {
-      icon: Coffee,
-      title: t('experience.support_24_7'),
-      description: t('experience.support_24_7_desc')
     },
     {
       icon: Wifi,

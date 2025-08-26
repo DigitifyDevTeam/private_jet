@@ -38,7 +38,7 @@ export default function Hero() {
           </p>
           <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row gap-3">
             <Button asChild variant="hero" className="h-11 px-6">
-              <a href="#contact">{t('hero.cta')}</a>
+              <a href="/demander-un-devis">{t('hero.cta')}</a>
             </Button>
             <Button asChild variant="ghostContrast" className="h-11 px-6">
               <a href="tel:+10000000000">Call 24/7</a>

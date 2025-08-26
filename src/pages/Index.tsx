@@ -17,7 +17,7 @@ const Index = () => {
         <ExperienceSection />
         <FAQSection />
         <TrustSection />
-        <ContactSection />
+        <ContactSection showTitle={true} />
       </main>
       <Footer />
     </div>

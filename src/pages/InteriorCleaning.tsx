@@ -206,7 +206,7 @@ const InteriorCleaning = () => {
         </section>
 
         {/* Contact Section */}
-        <ContactSection />
+        <ContactSection showTitle={true} />
       </main>
       
       <Footer />
