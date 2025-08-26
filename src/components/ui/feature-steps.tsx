@@ -20,24 +20,32 @@ export function FeatureSteps({
   features,
   className = "",
   title = "Les étapes",
-  autoPlayInterval = 3000,
+  autoPlayInterval = 1000,
   imageHeight = "h-[400px]",
 }: FeatureStepsProps) {
   const [currentFeature, setCurrentFeature] = useState(0);
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      if (progress < 100) {
-        setProgress((prev) => prev + 100 / (autoPlayInterval / 100));
-      } else {
-        setCurrentFeature((prev) => (prev + 1) % features.length);
-        setProgress(0);
-      }
+    // progress update every 100ms
+    const progressTimer = setInterval(() => {
+      setProgress((prev) => {
+        const next = prev + 10; // 10% every 100ms = 1 second total
+        return next >= 100 ? 100 : next;
+      });
     }, 100);
 
-    return () => clearInterval(timer);
-  }, [progress, features.length, autoPlayInterval]);
+    // feature change exactly every autoPlayInterval
+    const featureTimer = setInterval(() => {
+      setCurrentFeature((prev) => (prev + 1) % features.length);
+      setProgress(0); // reset progress
+    }, autoPlayInterval);
+
+    return () => {
+      clearInterval(progressTimer);
+      clearInterval(featureTimer);
+    };
+  }, [features.length, autoPlayInterval]);
 
   return (
     <div className={`p-8 md:p-12 ${className}`}>

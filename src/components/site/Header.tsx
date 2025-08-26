@@ -247,8 +247,8 @@ export default function Header() {
 
             <div className="hidden lg:flex items-center gap-3">
               <Button asChild variant="ghostContrast" className="h-10 px-4">
-                <a href="tel:+10000000000" aria-label="Call 24/7">
-                  <Phone className="mr-2" /> Call 24/7
+                <a href="tel:+10000000000" aria-label={t('contact.call_24_7')}>
+                  <Phone className="mr-2" /> {t('contact.call_24_7')}
                 </a>
               </Button>
               <Button asChild variant="hero" className="h-10 px-5">
@@ -303,8 +303,8 @@ export default function Header() {
         <div className="hidden lg:flex items-center gap-3">
           <LanguageSwitcher />
           <Button asChild variant="ghostContrast" className="h-10 px-4">
-            <a href="tel:+10000000000" aria-label="Call 24/7" style={{ fontFamily: '"Mozilla Headline", serif' }}>
-              <Phone className="mr-2" /> Call 24/7
+            <a href="tel:+10000000000" aria-label={t('contact.call_24_7')} style={{ fontFamily: '"Mozilla Headline", serif' }}>
+              <Phone className="mr-2" /> {t('contact.call_24_7')}
             </a>
           </Button>
           <Button asChild variant="hero" className="h-10 px-5">

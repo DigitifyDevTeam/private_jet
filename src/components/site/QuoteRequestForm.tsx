@@ -110,7 +110,6 @@ export default function QuoteRequestForm() {
                       <option value="cessna">{t('quote.aircraft_brand.cessna')}</option>
                       <option value="embraer">{t('quote.aircraft_brand.embraer')}</option>
                       <option value="hondajet">{t('quote.aircraft_brand.hondajet')}</option>
-                      <option value="other">{t('quote.aircraft_brand.other')}</option>
                     </select>
                   </div>
 
@@ -123,17 +122,15 @@ export default function QuoteRequestForm() {
                       value={selectedAircraftModel}
                       onChange={(e) => setSelectedAircraftModel(e.target.value)}
                       className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-gray-600 focus:outline-none bg-white text-black hover:border-gray-400"
-                      disabled={!selectedAircraftBrand || selectedAircraftBrand === 'other'}
+                      disabled={!selectedAircraftBrand}
                     >
                       <option value="">
                         {!selectedAircraftBrand 
                           ? t('quote.aircraft_model.select_brand_first')
-                          : selectedAircraftBrand === 'other' 
-                            ? t('quote.aircraft_model.other_brand')
-                            : t('quote.aircraft_model.select_model')
+                          : t('quote.aircraft_model.select_model')
                         }
                       </option>
-                      {selectedAircraftBrand && selectedAircraftBrand !== 'other' && 
+                      {selectedAircraftBrand && 
                         aircraftModels[selectedAircraftBrand as keyof typeof aircraftModels]?.map((model) => (
                           <option key={model.value} value={model.value}>
                             {model.label}

@@ -41,7 +41,7 @@ export default function Hero() {
               <a href="/demander-un-devis">{t('hero.cta')}</a>
             </Button>
             <Button asChild variant="ghostContrast" className="h-11 px-6">
-              <a href="tel:+10000000000">Call 24/7</a>
+              <a href="tel:+10000000000">{t('contact.call_24_7')}</a>
             </Button>
           </div>
         </Reveal>
