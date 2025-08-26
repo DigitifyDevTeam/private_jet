@@ -41,10 +41,11 @@ export default function FAQSection() {
       <div className="max-w-4xl mx-auto">
         {/* Title */}
         <h2 
-          className="mb-8 sm:mb-12 lg:mb-[50px] xl:mb-[63.5px] text-gray-light font-bold text-center mozilla-headline-faq"
+          className="mb-8 sm:mb-12 lg:mb-[50px] xl:mb-[63.5px] text-gray-light font-bold text-center"
           style={{
             fontSize: 'clamp(32px, 5vw, 60px)',
-            lineHeight: '1.1'
+            lineHeight: '1.1',
+            fontFamily: '"Mozilla Headline", serif'
           }}
         >
           {t('faq.title').split(' ').slice(0, -1).join(' ')} <span style={{ color: '#fff' }}>{t('faq.questions')}</span>
