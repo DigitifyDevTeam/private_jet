@@ -252,7 +252,7 @@ export default function Header() {
                 </a>
               </Button>
               <Button asChild variant="hero" className="h-10 px-5">
-                <a href="/contact">Request a Quote</a>
+                <a href="/demander-un-devis">Demander un devis</a>
               </Button>
             </div>
           </div>
@@ -308,7 +308,7 @@ export default function Header() {
             </a>
           </Button>
           <Button asChild variant="hero" className="h-10 px-5">
-            <a href="/contact" style={{ fontFamily: '"Mozilla Headline", serif' }}>Demander un devis</a>
+            <a href="/demander-un-devis" style={{ fontFamily: '"Mozilla Headline", serif' }}>Demander un devis</a>
           </Button>
         </div>
 
