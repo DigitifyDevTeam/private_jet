@@ -48,7 +48,7 @@ export default function FAQSection() {
             fontFamily: '"Mozilla Headline", serif'
           }}
         >
-          {t('faq.title').split(' ').slice(0, -1).join(' ')} <span style={{ color: '#fff' }}>{t('faq.questions')}</span>
+          {t('faq.title')}
         </h2>
 
         {/* FAQ Items */}
