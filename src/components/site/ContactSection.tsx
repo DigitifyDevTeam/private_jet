@@ -432,8 +432,6 @@ export default function ContactSection({ onContactSubmit, showTitle = false }: C
                     color: '#ffffff'
                   }}
                 >
-                  {t('contact.founder.meet')}
-
                 </div>
               </div>
             </div>

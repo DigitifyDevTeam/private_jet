@@ -95,6 +95,37 @@ const translations = {
     'common.view_gallery': 'Voir la galerie',
     'common.request_quote': 'Demander un devis',
     
+    // About page CTA
+    'about.cta.title': 'Prêt à transformer votre Jet Privé ?',
+    'about.cta.subtitle': 'Créons quelque chose d\'extraordinaire ensemble.',
+    'about.cta.button': 'Commencer',
+    
+    // About page Stats
+    'about.stats.aircraft_serviced': 'Avions Servis',
+    'about.stats.satisfied_clients': 'Clients Satisfaits',
+    'about.stats.years_experience': 'Années d\'Expérience',
+    'about.stats.safety_record': 'Record de Sécurité',
+    
+    // About page Main Section
+    'about.our_story': 'NOTRE HISTOIRE',
+    'about.title': 'À Propos d\'AeroLustre',
+    'about.description': 'Nous sommes une équipe passionnée de professionnels dédiés à l\'excellence dans l\'entretien et le détail d\'aéronefs. Avec une attention particulière aux détails et un engagement envers l\'excellence, nous transformons votre vision en réalité.',
+    'about.portfolio_button': 'Notre Portfolio',
+    
+    // About page Services
+    'about.service.cleaning.title': 'Nettoyage',
+    'about.service.cleaning.description': 'Services de nettoyage d\'avions experts garantissant que votre avion maintient son apparence optimale. Nos techniciens certifiés fournissent des soins complets et une attention à chaque détail.',
+    'about.service.detailing.title': 'Détail',
+    'about.service.detailing.description': 'Services professionnels de détail d\'avions qui restaurent et maintiennent l\'apparence immaculée de votre avion. Du lavage extérieur au nettoyage intérieur en profondeur.',
+    'about.service.safety.title': 'Sécurité',
+    'about.service.safety.description': 'Standards de sécurité intransigeants dans tous nos services. Nous suivons des protocoles et réglementations stricts pour garantir le plus haut niveau de sécurité pour votre avion.',
+    'about.service.technology.title': 'Technologie',
+    'about.service.technology.description': 'Équipement de pointe et techniques avancées pour des résultats supérieurs. Nous utilisons la dernière technologie pour offrir une qualité de service exceptionnelle.',
+    'about.service.expertise.title': 'Expertise',
+    'about.service.expertise.description': 'Années d\'expérience dans le nettoyage et le détail d\'avions. Notre équipe de professionnels apporte une expertise inégalée à chaque projet.',
+    'about.service.quality.title': 'Qualité',
+    'about.service.quality.description': 'Engagement envers l\'excellence dans chaque service que nous fournissons. Nous sommes fiers de livrer les résultats de la plus haute qualité qui dépassent les attentes.',
+    
     // FAQ
     'faq.title': 'Questions fréquemment posées',
     'faq.questions': 'Questions',
@@ -237,7 +268,6 @@ const translations = {
     'contact.founder.welcome': 'Bienvenue chez AeroLustre, où l\'excellence et la sophistication se rencontrent dans l\'aviation privée.',
     'contact.founder.commitment': 'Nous nous engageons à dépasser vos attentes',
     'contact.founder.discover': 'avec notre service premium et notre attention aux détails. Découvrez l\'apogée du luxe aérien.',
-    'contact.founder.meet': 'Rencontrer le fondateur d\'AEROLUSTRE',
     
     // Footer
     'footer.description': 'Services professionnels de nettoyage d\'avions. Nous fournissons des soins complets pour votre avion avec les plus hauts standards de qualité et de sécurité.',
@@ -347,8 +377,8 @@ const translations = {
     // Contact Success Page
     'contact_success.title': 'Votre message a été envoyé !',
     'contact_success.subtitle': 'Merci de nous avoir contacté. Notre équipe vous répondra dans les plus brefs délais.',
-    'contact_success.quote_title': 'Remplissez ce formulaire pour recevoir un devis personnalisé',
-    'contact_success.quote_description': 'Pour vous offrir le meilleur service possible, nous avons besoin de quelques informations supplémentaires sur votre avion et vos besoins spécifiques.',
+    'contact_success.quote_title': 'Nous avons bien reçu votre message et, afin de pouvoir y répondre au mieux, nous vous invitons à remplir ce formulaire complémentaire.',
+    'contact_success.quote_description': 'Notre équipe reviendra ensuite vers vous dans les plus brefs délais.',
     
     // Page Titles
     'page.contact.title': 'Contact',
@@ -499,6 +529,37 @@ const translations = {
     'common.learn_more': 'Learn more',
     'common.view_gallery': 'View gallery',
     'common.request_quote': 'Request a quote',
+    
+    // About page CTA
+    'about.cta.title': 'Ready to transform your Private Jet?',
+    'about.cta.subtitle': 'Let\'s create something extraordinary together.',
+    'about.cta.button': 'Get Started',
+    
+    // About page Stats
+    'about.stats.aircraft_serviced': 'Aircraft Serviced',
+    'about.stats.satisfied_clients': 'Satisfied Clients',
+    'about.stats.years_experience': 'Years Experience',
+    'about.stats.safety_record': 'Safety Record',
+    
+    // About page Main Section
+    'about.our_story': 'OUR STORY',
+    'about.title': 'About AeroLustre',
+    'about.description': 'We are a passionate team of professionals dedicated to excellence in aircraft maintenance and detailing. With meticulous attention to detail and a commitment to excellence, we transform your vision into reality.',
+    'about.portfolio_button': 'Our Portfolio',
+    
+    // About page Services
+    'about.service.cleaning.title': 'Cleaning',
+    'about.service.cleaning.description': 'Expert aircraft cleaning services ensuring your aircraft maintains peak appearance. Our certified technicians provide comprehensive care and attention to every detail.',
+    'about.service.detailing.title': 'Detailing',
+    'about.service.detailing.description': 'Professional aircraft detailing services that restore and maintain the pristine appearance of your aircraft. From exterior washing to interior deep cleaning.',
+    'about.service.safety.title': 'Safety',
+    'about.service.safety.description': 'Uncompromising safety standards in all our services. We follow strict protocols and regulations to ensure the highest level of safety for your aircraft.',
+    'about.service.technology.title': 'Technology',
+    'about.service.technology.description': 'State-of-the-art equipment and advanced techniques for superior results. We use the latest technology to deliver exceptional service quality.',
+    'about.service.expertise.title': 'Expertise',
+    'about.service.expertise.description': 'Years of experience in aircraft cleaning and detailing. Our team of professionals brings unparalleled expertise to every project.',
+    'about.service.quality.title': 'Quality',
+    'about.service.quality.description': 'Commitment to excellence in every service we provide. We take pride in delivering the highest quality results that exceed expectations.',
     
     // FAQ
     'faq.title': 'Frequently Asked Questions',
@@ -753,8 +814,8 @@ const translations = {
     // Contact Success Page
     'contact_success.title': 'Your message has been sent!',
     'contact_success.subtitle': 'Thank you for contacting us. Our team will respond to you as soon as possible.',
-    'contact_success.quote_title': 'Fill out this form to receive a personalized quote',
-    'contact_success.quote_description': 'To provide you with the best possible service, we need some additional information about your aircraft and your specific needs.',
+    'contact_success.quote_title': 'We have received your message and, in order to respond to it as best as possible, we invite you to fill out this complementary form.',
+    'contact_success.quote_description': 'Our team will then get back to you as soon as possible.',
     
     // Page Titles
     'page.contact.title': 'Contact',

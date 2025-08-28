@@ -1,6 +1,7 @@
 import React from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const airports = [
   {
@@ -139,9 +140,11 @@ export function AirportsSection() {
           <p className="text-gray-400 text-lg mb-8 font-medium" style={{ fontFamily: '"Mozilla Headline", sans-serif', fontWeight: 400 }}>
             {t('airports.cta_text')}
           </p>
-          <button className="bg-white text-black hover:bg-gray-200 transition-colors px-8 py-4 text-lg rounded-full font-bold" style={{ fontFamily: '"Mozilla Headline", sans-serif', fontWeight: 600 }}>
-            {t('airports.cta_button')}
-          </button>
+          <Link to="/contact">
+            <button className="bg-white text-black hover:bg-gray-200 transition-colors px-8 py-4 text-lg rounded-full font-bold" style={{ fontFamily: '"Mozilla Headline", sans-serif', fontWeight: 600 }}>
+              {t('airports.cta_button')}
+            </button>
+          </Link>
         </div>
       </div>
     </section>

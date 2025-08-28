@@ -9,8 +9,8 @@ function Logo1(props: React.ImgHTMLAttributes<HTMLImageElement>) {
     <img
       src="/images/logo1.png"
       alt="Logo 1"
-      width="100"
-      height="100"
+      width="40"
+      height="40"
       style={{ objectFit: 'contain' }}
       {...props}
     />
@@ -22,8 +22,8 @@ function Logo2(props: React.ImgHTMLAttributes<HTMLImageElement>) {
     <img
       src="/images/logo2.png"
       alt="Logo 2"
-      width="100"
-      height="100"
+      width="40"
+      height="40"
       style={{ objectFit: 'contain' }}
       {...props}
     />
@@ -35,8 +35,8 @@ function Logo3(props: React.ImgHTMLAttributes<HTMLImageElement>) {
     <img
       src="/images/logo3.png"
       alt="Logo 3"
-      width="100"
-      height="100"
+      width="40"
+      height="40"
       style={{ objectFit: 'contain' }}
       {...props}
     />
@@ -48,8 +48,8 @@ function Logo4(props: React.ImgHTMLAttributes<HTMLImageElement>) {
     <img
       src="/images/logo4.png"
       alt="Logo 4"
-      width="100"
-      height="100"
+      width="40"
+      height="40"
       style={{ objectFit: 'contain' }}
       {...props}
     />
@@ -61,8 +61,8 @@ function Logo5(props: React.ImgHTMLAttributes<HTMLImageElement>) {
     <img
       src="/images/logo5.png"
       alt="Logo 5"
-      width="100"
-      height="100"
+      width="40"
+      height="40"
       style={{ objectFit: 'contain' }}
       {...props}
     />
@@ -74,8 +74,8 @@ function Logo6(props: React.ImgHTMLAttributes<HTMLImageElement>) {
     <img
       src="/images/logo6.png"
       alt="Logo 6"
-      width="100"
-      height="100"
+      width="40"
+      height="40"
       style={{ objectFit: 'contain' }}
       {...props}
     />
@@ -87,8 +87,8 @@ function Logo7(props: React.ImgHTMLAttributes<HTMLImageElement>) {
     <img
       src="/images/logo7.png"
       alt="Logo 7"
-      width="100"
-      height="100"
+      width="40"
+      height="40"
       style={{ objectFit: 'contain' }}
       {...props}
     />
@@ -100,8 +100,8 @@ function Logo8(props: React.ImgHTMLAttributes<HTMLImageElement>) {
     <img
       src="/images/logo8.png"
       alt="Logo 8"
-      width="100"
-      height="100"
+      width="40"
+      height="40"
       style={{ objectFit: 'contain' }}
       {...props}
     />
@@ -113,8 +113,8 @@ function Logo9(props: React.ImgHTMLAttributes<HTMLImageElement>) {
     <img
       src="/images/logo9.png"
       alt="Logo 9"
-      width="100"
-      height="100"
+      width="40"
+      height="40"
       style={{ objectFit: 'contain' }}
       {...props}
     />

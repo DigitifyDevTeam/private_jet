@@ -278,15 +278,19 @@ export default function Header() {
                       }}
                     />
                   </div>
-                  <div className="absolute inset-0 flex items-end p-4 sm:p-6 lg:p-8">
-                    <div>
-                      <h4 className="mb-2 md:mb-3 text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-[36px] text-white font-bold leading-tight" style={{ fontFamily: '"Mozilla Headline", serif' }}>
-                        {service.title}
-                      </h4>
-                      <div className="text-white/90 font-semibold text-sm sm:text-base">
+                  <div className="absolute inset-0 flex flex-col justify-between p-4 sm:p-6 lg:p-8">
+                    <div className="w-full">
+                      <div className="h-20 sm:h-24 md:h-28 lg:h-32 flex items-start">
+                        <h4 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-[36px] text-white font-bold leading-tight" style={{ fontFamily: '"Mozilla Headline", serif' }}>
+                          {service.title}
+                        </h4>
+                      </div>
+                    </div>
+                    <div className="w-full">
+                      <div className="text-white/90 font-semibold text-sm sm:text-base mb-3">
                         {service.description}
                       </div>
-                      <div className="mt-4 flex items-center text-white text-sm font-medium">
+                      <div className="flex items-center text-white text-sm font-medium">
                         <span>Discover More</span>
                         <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

@@ -27,6 +27,8 @@ import {
   Sparkles as SparklesIcon,
 } from "lucide-react"
 import { motion, useScroll, useTransform, useInView, useSpring } from "framer-motion"
+import { Link } from "react-router-dom"
+import { useLanguage } from "@/contexts/LanguageContext"
 
 export default function AboutUsSection() {
   const [isVisible, setIsVisible] = useState(false)
@@ -34,6 +36,7 @@ export default function AboutUsSection() {
   const statsRef = useRef<HTMLDivElement>(null)
   const isInView = useInView(sectionRef, { once: false, amount: 0.1 })
   const isStatsInView = useInView(statsRef, { once: false, amount: 0.3 })
+  const { t } = useLanguage()
 
   // Parallax effect for decorative elements
   const { scrollYProgress } = useScroll({
@@ -74,58 +77,52 @@ export default function AboutUsSection() {
     {
       icon: <Wrench className="w-6 h-6" />,
       secondaryIcon: <Sparkles className="w-4 h-4 absolute -top-1 -right-1 text-white" />,
-      title: "Nettoyage",
-      description:
-        "Expert aircraft cleaning services ensuring your aircraft maintains peak appearance. Our certified technicians provide comprehensive care and attention to every detail.",
+      title: t('about.service.cleaning.title'),
+      description: t('about.service.cleaning.description'),
       position: "left",
     },
     {
       icon: <Droplets className="w-6 h-6" />,
       secondaryIcon: <CheckCircle className="w-4 h-4 absolute -top-1 -right-1 text-white" />,
-      title: "Détail",
-      description:
-        "Professional aircraft detailing services that restore and maintain the pristine appearance of your aircraft. From exterior washing to interior deep cleaning.",
+      title: t('about.service.detailing.title'),
+      description: t('about.service.detailing.description'),
       position: "left",
     },
     {
       icon: <Shield className="w-6 h-6" />,
       secondaryIcon: <Star className="w-4 h-4 absolute -top-1 -right-1 text-white" />,
-      title: "Sécurité",
-      description:
-        "Uncompromising safety standards in all our services. We follow strict protocols and regulations to ensure the highest level of safety for your aircraft.",
+      title: t('about.service.safety.title'),
+      description: t('about.service.safety.description'),
       position: "left",
     },
     {
       icon: <Settings className="w-6 h-6" />,
       secondaryIcon: <Sparkles className="w-4 h-4 absolute -top-1 -right-1 text-white" />,
-      title: "Technologie",
-      description:
-        "State-of-the-art equipment and advanced techniques for superior results. We use the latest technology to deliver exceptional service quality.",
+      title: t('about.service.technology.title'),
+      description: t('about.service.technology.description'),
       position: "right",
     },
     {
       icon: <Plane className="w-6 h-6" />,
       secondaryIcon: <CheckCircle className="w-4 h-4 absolute -top-1 -right-1 text-white" />,
-      title: "Expertise",
-      description:
-        "Years of experience in aircraft cleaning and detailing. Our team of professionals brings unparalleled expertise to every project.",
+      title: t('about.service.expertise.title'),
+      description: t('about.service.expertise.description'),
       position: "right",
     },
     {
       icon: <Award className="w-6 h-6" />,
       secondaryIcon: <Star className="w-4 h-4 absolute -top-1 -right-1 text-white" />,
-      title: "Qualité",
-      description:
-        "Commitment to excellence in every service we provide. We take pride in delivering the highest quality results that exceed expectations.",
+      title: t('about.service.quality.title'),
+      description: t('about.service.quality.description'),
       position: "right",
     },
   ]
 
   const stats = [
-    { icon: <Award />, value: 500, label: "Aircraft Serviced", suffix: "+" },
-    { icon: <Users />, value: 200, label: "Satisfied Clients", suffix: "+" },
-    { icon: <Calendar />, value: 15, label: "Years Experience", suffix: "" },
-    { icon: <TrendingUp />, value: 100, label: "Safety Record", suffix: "%" },
+    { icon: <Award />, value: 500, label: t('about.stats.aircraft_serviced'), suffix: "+" },
+    { icon: <Users />, value: 200, label: t('about.stats.satisfied_clients'), suffix: "+" },
+    { icon: <Calendar />, value: 15, label: t('about.stats.years_experience'), suffix: "" },
+    { icon: <TrendingUp />, value: 100, label: t('about.stats.safety_record'), suffix: "%" },
   ]
 
   return (
@@ -196,9 +193,9 @@ export default function AboutUsSection() {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <Zap className="w-4 h-4" />
-            NOTRE HISTOIRE
+            {t('about.our_story')}
           </motion.span>
-          <h2 className="text-4xl md:text-5xl font-light mb-4 text-center text-white mozilla-headline-about" style={{ fontSize: '4.5rem' }}>À Propos d'AeroLustre</h2>
+          <h2 className="text-4xl md:text-5xl font-light mb-4 text-center text-white mozilla-headline-about" style={{ fontSize: '4.5rem' }}>{t('about.title')}</h2>
           <motion.div
             className="w-24 h-1 bg-white"
             initial={{ width: 0 }}
@@ -208,8 +205,7 @@ export default function AboutUsSection() {
         </motion.div>
 
         <motion.p className="text-center max-w-2xl mx-auto mb-16 text-gray-300" variants={itemVariants}>
-          Nous sommes une équipe passionnée de professionnels dédiés à l'excellence dans l'entretien et le détail d'aéronefs. 
-          Avec une attention particulière aux détails et un engagement envers l'excellence, nous transformons votre vision en réalité.
+          {t('about.description')}
         </motion.p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-24 relative">
@@ -258,7 +254,7 @@ export default function AboutUsSection() {
                     whileTap={{ scale: 0.95 }}
                     onClick={() => window.location.href = '/'}
                   >
-                    Notre Portfolio <ArrowRight className="w-4 h-4" />
+                    {t('about.portfolio_button')} <ArrowRight className="w-4 h-4" />
                   </motion.button>
                 </motion.div>
               </motion.div>
@@ -356,16 +352,18 @@ export default function AboutUsSection() {
           transition={{ duration: 0.8, delay: 0.5 }}
         >
           <div className="flex-1">
-            <h3 className="text-2xl font-medium mb-2">Prêt à transformer votre Jet Privé  ?</h3>
-            <p className="text-gray-300">Créons quelque chose d'extraordinaire ensemble.</p>
+            <h3 className="text-2xl font-medium mb-2">{t('about.cta.title')}</h3>
+            <p className="text-gray-300">{t('about.cta.subtitle')}</p>
           </div>
-          <motion.button
-            className="bg-white hover:bg-gray-100 text-black px-6 py-3 rounded-lg flex items-center gap-2 font-medium transition-colors"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Commencer <ArrowRight className="w-4 h-4" />
-          </motion.button>
+          <Link to="/demander-un-devis">
+            <motion.button
+              className="bg-white hover:bg-gray-100 text-black px-6 py-3 rounded-lg flex items-center gap-2 font-medium transition-colors"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              {t('about.cta.button')} <ArrowRight className="w-4 h-4" />
+            </motion.button>
+          </Link>
         </motion.div>
       </motion.div>
     </section>
