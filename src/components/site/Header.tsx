@@ -14,10 +14,10 @@ export default function Header() {
   const location = useLocation();
 
   const nav = [
-    { href: "/", label: "Home" },
+    { href: "/", label: t('nav.home') },
     { href: "#services", label: t('nav.services'), hasMegaMenu: true },
     { href: "/a-propos", label: t('nav.about') },
-    { href: "/demander-un-devis", label: "Demander un devis" },
+    { href: "/demander-un-devis", label: t('nav.quote') },
     { href: "/contact", label: t('nav.contact') },
   ];
 
@@ -26,19 +26,19 @@ export default function Header() {
       href: "/nettoyage-exterieur",
       title: t('service.exterior'),
       image: "/images/detailing2.png",
-      description: "Professional detailing services"
+      description: t('service.exterior.description')
     },
     {
       href: "/nettoyage-interieur",
       title: t('service.interior'),
       image: "/images/interior.jpg",
-      description: "Interior cleaning services"
+      description: t('service.interior.description')
     },
     {
       href: "/desinfection",
       title: t('service.disinfection'),
       image: "/images/detailing.webp",
-      description: "Sanitization services"
+      description: t('service.disinfection.description')
     }
   ];
 
@@ -280,7 +280,7 @@ export default function Header() {
                   </div>
                   <div className="absolute inset-0 flex items-end p-4 sm:p-6 lg:p-8">
                     <div>
-                      <h4 className="mb-2 md:mb-3 text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-[36px] text-white font-bold leading-tight">
+                      <h4 className="mb-2 md:mb-3 text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-[36px] text-white font-bold leading-tight" style={{ fontFamily: '"Mozilla Headline", serif' }}>
                         {service.title}
                       </h4>
                       <div className="text-white/90 font-semibold text-sm sm:text-base">

@@ -13,7 +13,6 @@ export default function ContactSection({ onContactSubmit, showTitle = false }: C
   const navigate = useNavigate();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
-    reason: '',
     fullName: '',
     phone: '',
     email: '',
@@ -44,8 +43,8 @@ export default function ContactSection({ onContactSubmit, showTitle = false }: C
       // Appel du callback si fourni
       onContactSubmit?.();
       
-      // Redirection vers la page de devis
-      navigate('/contact/quote-request');
+      // Redirection vers la page de confirmation avec formulaire de devis
+      navigate('/contact-success');
       
     } catch (error) {
       console.error('Erreur lors de l\'envoi:', error);
@@ -223,56 +222,7 @@ export default function ContactSection({ onContactSubmit, showTitle = false }: C
                     className="space-y-6 sm:space-y-8"
                     onSubmit={handleSubmit}
                   >
-                    {/* Reason for Enquiry */}
-                    <div>
-                      <label className="block mb-4 sm:mb-6 font-semibold text-base sm:text-lg" style={{ color: '#000000', fontFamily: 'Inter, Helvetica Neue, SF Pro Text, Segoe UI, Arial, sans-serif' }}>
-                        {t('contact.form.reason_label')} <span style={{ color: '#cf2e2e' }}>*</span>
-                      </label>
-                      <div className="flex flex-wrap gap-2 sm:gap-3">
-                        <button
-                          type="button"
-                          onClick={() => handleInputChange('reason', 'general_enquiry')}
-                          className={`px-4 sm:px-6 py-2 sm:py-3 rounded-full border font-medium transition-colors text-sm sm:text-base ${
-                            formData.reason === 'general_enquiry'
-                              ? 'bg-gray-600 border-gray-600 text-white'
-                              : 'border-gray-400 bg-white text-black hover:bg-gray-100'
-                          }`}
-                          style={{
-                            fontFamily: 'Inter, Helvetica Neue, SF Pro Text, Segoe UI, Arial, sans-serif'
-                          }}
-                        >
-                          {t('contact.form.general_enquiry')}
-                        </button>
-                        <button
-                          type="button"
-                          onClick={() => handleInputChange('reason', 'press')}
-                          className={`px-4 sm:px-6 py-2 sm:py-3 rounded-full border font-medium transition-colors text-sm sm:text-base ${
-                            formData.reason === 'press'
-                              ? 'bg-gray-600 border-gray-600 text-white'
-                              : 'border-gray-400 bg-white text-black hover:bg-gray-100'
-                          }`}
-                          style={{
-                            fontFamily: 'Inter, Helvetica Neue, SF Pro Text, Segoe UI, Arial, sans-serif'
-                          }}
-                        >
-                          {t('contact.form.press')}
-                        </button>
-                        <button
-                          type="button"
-                          onClick={() => handleInputChange('reason', 'other')}
-                          className={`px-4 sm:px-6 py-2 sm:py-3 rounded-full border font-medium transition-colors text-sm sm:text-base ${
-                            formData.reason === 'other'
-                              ? 'bg-gray-600 border-gray-600 text-white'
-                              : 'border-gray-400 bg-white text-black hover:bg-gray-100'
-                          }`}
-                          style={{
-                            fontFamily: 'Inter, Helvetica Neue, SF Pro Text, Segoe UI, Arial, sans-serif'
-                          }}
-                        >
-                          {t('contact.form.other')}
-                        </button>
-                      </div>
-                    </div>
+
 
                     {/* Personal Details */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">

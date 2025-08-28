@@ -10,36 +10,87 @@ export default function QuoteRequestForm() {
 
   const aircraftModels = {
     gulfstream: [
-      { value: 'gulfstream_g650', label: 'Gulfstream G650 / G650ER' },
-      { value: 'gulfstream_g700', label: 'Gulfstream G700' },
-      { value: 'gulfstream_g500', label: 'Gulfstream G500' },
-      { value: 'gulfstream_g600', label: 'Gulfstream G600' }
+      { value: 'gulfstream_g280', label: 'G280' },
+      { value: 'gulfstream_g400', label: 'G400' },
+      { value: 'gulfstream_g500', label: 'G500' },
+      { value: 'gulfstream_g550', label: 'G550' },
+      { value: 'gulfstream_g600', label: 'G600' },
+      { value: 'gulfstream_g650', label: 'G650/ER' },
+      { value: 'gulfstream_g700', label: 'G700' },
+      { value: 'gulfstream_g800', label: 'G800' }
     ],
     bombardier: [
-      { value: 'bombardier_global_7500', label: 'Global 7500' },
+      { value: 'bombardier_challenger_300', label: 'Challenger 300' },
+      { value: 'bombardier_challenger_350', label: 'Challenger 350' },
       { value: 'bombardier_challenger_650', label: 'Challenger 650' },
-      { value: 'bombardier_learjet_75', label: 'Learjet 75 Liberty' }
-    ],
-    dassault: [
-      { value: 'dassault_falcon_7x', label: 'Falcon 7X' },
-      { value: 'dassault_falcon_8x', label: 'Falcon 8X' },
-      { value: 'dassault_falcon_10x', label: 'Falcon 10X' },
-      { value: 'dassault_falcon_2000lxs', label: 'Falcon 2000LXS' }
+      { value: 'bombardier_global_6000', label: 'Global 6000' },
+      { value: 'bombardier_global_5500', label: 'Global 5500' },
+      { value: 'bombardier_global_6500', label: 'Global 6500' },
+      { value: 'bombardier_learjet_40xr', label: 'Learjet 40XR' },
+      { value: 'bombardier_learjet_45xr', label: 'Learjet 45XR' },
+      { value: 'bombardier_learjet_60xr', label: 'Learjet 60XR' },
+      { value: 'bombardier_learjet_75xr', label: 'Learjet 75XR' }
     ],
     cessna: [
-      { value: 'cessna_citation_longitude', label: 'Citation Longitude' },
-      { value: 'cessna_citation_xls', label: 'Citation XLS+' },
-      { value: 'cessna_citation_cj4', label: 'Citation CJ4' },
-      { value: 'cessna_citation_mustang', label: 'Citation Mustang' }
+      { value: 'cessna_citation_m2_gen2', label: 'Citation M2 Gen2' },
+      { value: 'cessna_citation_cj3_plus', label: 'Citation CJ3+' },
+      { value: 'cessna_citation_cj4_gen2', label: 'Citation CJ4 Gen2' },
+      { value: 'cessna_citation_xls_gen2', label: 'Citation XLS Gen2' },
+      { value: 'cessna_citation_latitude', label: 'Citation Latitude' },
+      { value: 'cessna_citation_longitude', label: 'Citation Longitude' }
+    ],
+    dassault: [
+      { value: 'dassault_falcon_2000', label: 'Falcon 2000 series' },
+      { value: 'dassault_falcon_7x', label: 'Falcon 7X' },
+      { value: 'dassault_falcon_8x', label: 'Falcon 8X' },
+      { value: 'dassault_falcon_6x', label: 'Falcon 6X' },
+      { value: 'dassault_falcon_10x', label: 'Falcon 10X' }
     ],
     embraer: [
-      { value: 'embraer_phenom_300e', label: 'Phenom 300E' },
+      { value: 'embraer_phenom_100', label: 'Phenom 100' },
+      { value: 'embraer_phenom_300', label: 'Phenom 300' },
+      { value: 'embraer_legacy_450', label: 'Legacy 450' },
+      { value: 'embraer_legacy_500', label: 'Legacy 500' },
+      { value: 'embraer_legacy_650e', label: 'Legacy 650E' },
       { value: 'embraer_praetor_500', label: 'Praetor 500' },
       { value: 'embraer_praetor_600', label: 'Praetor 600' },
-      { value: 'embraer_legacy_650', label: 'Legacy 650' }
+      { value: 'embraer_lineage_1000', label: 'Lineage 1000' }
     ],
     hondajet: [
+      { value: 'hondajet_ha420', label: 'HondaJet HA-420' },
+      { value: 'hondajet_elite', label: 'HondaJet Elite' },
       { value: 'hondajet_elite_ii', label: 'HondaJet Elite II' }
+    ],
+    pilatus: [
+      { value: 'pilatus_pc24', label: 'PC-24' }
+    ],
+    boeing: [
+      { value: 'boeing_bbj1', label: 'BBJ1' },
+      { value: 'boeing_bbj2', label: 'BBJ2' },
+      { value: 'boeing_bbj3', label: 'BBJ3' },
+      { value: 'boeing_bbj_max', label: 'BBJ MAX' },
+      { value: 'boeing_bbj_vip', label: 'BBJ VIP' },
+      { value: 'boeing_747_8', label: '747-8' },
+      { value: 'boeing_777_vip', label: '777 VIP' }
+    ],
+    airbus: [
+      { value: 'airbus_acj318', label: 'ACJ318' },
+      { value: 'airbus_acj319', label: 'ACJ319' },
+      { value: 'airbus_acj320neo', label: 'ACJ320neo' },
+      { value: 'airbus_acj330', label: 'ACJ330' },
+      { value: 'airbus_acj350', label: 'ACJ350' },
+      { value: 'airbus_acj380', label: 'ACJ380' }
+    ],
+    nextant: [
+      { value: 'nextant_400xt', label: 'Nextant 400XT' }
+    ],
+    beechcraft: [
+      { value: 'beechcraft_king_air', label: 'King Air' },
+      { value: 'beechcraft_bonanza', label: 'Bonanza' },
+      { value: 'beechcraft_baron_g58', label: 'Baron G58' }
+    ],
+    autre: [
+      { value: 'autre' }
     ]
   };
 
@@ -104,12 +155,18 @@ export default function QuoteRequestForm() {
                       className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-gray-600 focus:outline-none bg-white text-black hover:border-gray-400"
                     >
                       <option value="">{t('quote.aircraft_brand.select')}</option>
-                      <option value="gulfstream">{t('quote.aircraft_brand.gulfstream')}</option>
-                      <option value="bombardier">{t('quote.aircraft_brand.bombardier')}</option>
-                      <option value="dassault">{t('quote.aircraft_brand.dassault')}</option>
-                      <option value="cessna">{t('quote.aircraft_brand.cessna')}</option>
-                      <option value="embraer">{t('quote.aircraft_brand.embraer')}</option>
-                      <option value="hondajet">{t('quote.aircraft_brand.hondajet')}</option>
+                      <option value="gulfstream">Gulfstream</option>
+                      <option value="bombardier">Bombardier</option>
+                      <option value="cessna">Cessna (Textron)</option>
+                      <option value="dassault">Dassault</option>
+                      <option value="embraer">Embraer</option>
+                      <option value="hondajet">HondaJet</option>
+                      <option value="pilatus">Pilatus</option>
+                      <option value="boeing">Boeing (BBJ)</option>
+                      <option value="airbus">Airbus (ACJ)</option>
+                      <option value="nextant">Nextant</option>
+                      <option value="beechcraft">Beechcraft</option>
+                      <option value="autre">Autre</option>
                     </select>
                   </div>
 
@@ -122,15 +179,17 @@ export default function QuoteRequestForm() {
                       value={selectedAircraftModel}
                       onChange={(e) => setSelectedAircraftModel(e.target.value)}
                       className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-gray-600 focus:outline-none bg-white text-black hover:border-gray-400"
-                      disabled={!selectedAircraftBrand}
+                      disabled={!selectedAircraftBrand || selectedAircraftBrand === 'autre'}
                     >
                       <option value="">
                         {!selectedAircraftBrand 
                           ? t('quote.aircraft_model.select_brand_first')
+                          : selectedAircraftBrand === 'autre'
+                          ? t('quote.aircraft_model.not_applicable')
                           : t('quote.aircraft_model.select_model')
                         }
                       </option>
-                      {selectedAircraftBrand && 
+                      {selectedAircraftBrand && selectedAircraftBrand !== 'autre' && 
                         aircraftModels[selectedAircraftBrand as keyof typeof aircraftModels]?.map((model) => (
                           <option key={model.value} value={model.value}>
                             {model.label}
@@ -219,7 +278,8 @@ export default function QuoteRequestForm() {
                       {t('quote.urgency')} <span className="text-red-500">*</span>
                     </label>
                     <select className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-gray-600 focus:outline-none bg-white text-black hover:border-gray-400">
-                      <option value="">{t('quote.urgency')}</option>
+                      <option value="">{t('quote.urgency.select')}</option>
+                      <option value="free">{t('quote.urgency.free')}</option>
                       <option value="low">{t('quote.urgency.low')}</option>
                       <option value="medium">{t('quote.urgency.medium')}</option>
                       <option value="high">{t('quote.urgency.high')}</option>
@@ -232,11 +292,16 @@ export default function QuoteRequestForm() {
                     <label className="block mb-3 font-semibold text-black">
                       {t('quote.airport_location')} <span className="text-red-500">*</span>
                     </label>
-                    <input
-                      type="text"
-                      className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-gray-600 focus:outline-none bg-white text-black hover:border-gray-400"
-                      placeholder={t('quote.airport_placeholder')}
-                    />
+                    <select className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-gray-600 focus:outline-none bg-white text-black hover:border-gray-400">
+                      <option value="">{t('quote.airport.select')}</option>
+                      <option value="XCR">Paris-Vatry </option>
+                      <option value="CDG">Paris-Charles de Gaulle </option>
+                      <option value="NCE">Nice-Côte d'Azur  </option>
+                      <option value="CEQ">Cannes-Mandelieu  </option>
+                      <option value="MRS">Marseille-Provence </option>
+                      <option value="BOD">Bordeaux-Mérignac </option>
+                      <option value="other">{t('quote.airport.other')}</option>
+                    </select>
                   </div>
 
                   {/* Preferred Date */}
@@ -271,7 +336,6 @@ export default function QuoteRequestForm() {
                       <option value="phone">{t('quote.contact_preference.phone')}</option>
                       <option value="email">{t('quote.contact_preference.email')}</option>
                       <option value="whatsapp">{t('quote.contact_preference.whatsapp')}</option>
-                      <option value="any">{t('quote.contact_preference.any')}</option>
                     </select>
                   </div>
                 </div>

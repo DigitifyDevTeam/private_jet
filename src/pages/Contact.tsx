@@ -22,10 +22,10 @@ const Contact = () => {
           <section className="relative py-32 md:py-40 bg-background">
             <div className="container mx-auto px-4 text-center">
               <h1 className="text-white mb-8" style={{ fontSize: '4.5rem', fontFamily: '"Mozilla Headline", sans-serif' }}>
-                {t('section.contact')}
+                {t('page.contact.title')}
               </h1>
               <p className="text-gray-300 text-lg max-w-3xl mx-auto">
-                Get in touch with AeroLustre for all your aircraft detailing needs. Our team is ready to provide you with exceptional service and support.
+                {t('page.contact.description')}
               </p>
             </div>
           </section>
@@ -37,7 +37,7 @@ const Contact = () => {
           <AirportsSection />
         </main>
       
-              <Footer />
+        <Footer />
       </div>
     </>
   );

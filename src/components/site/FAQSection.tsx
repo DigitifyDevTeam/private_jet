@@ -100,10 +100,10 @@ export default function FAQSection() {
                 className="w-20 h-20 object-contain"
               />
             </div>
-            <h3 className="text-white text-xl font-bold mb-2 mozilla-headline-faq">FAA</h3>
-            <p className="text-gray-400 text-sm mb-3 mozilla-headline-faq">CERTIFIED</p>
+            <h3 className="text-white text-xl font-bold mb-2 mozilla-headline-faq">{t('faq.faa.title')}</h3>
+            <p className="text-gray-400 text-sm mb-3 mozilla-headline-faq">{t('faq.faa.certified')}</p>
             <p className="text-gray-300 text-sm leading-relaxed" style={{ fontFamily: 'Inter, Helvetica Neue, SF Pro Text, Segoe UI, Arial, sans-serif' }}>
-              Federal Aviation Administration certified facility, ensuring all services meet the highest safety and quality standards.
+              {t('faq.faa.description')}
             </p>
           </div>
 
@@ -116,10 +116,10 @@ export default function FAQSection() {
                 className="w-24 h-24 object-contain"
               />
             </div>
-            <h3 className="text-white text-xl font-bold mb-2 mozilla-headline-faq">ISO</h3>
-            <p className="text-gray-400 text-sm mb-3 mozilla-headline-faq">9001:2015</p>
+            <h3 className="text-white text-xl font-bold mb-2 mozilla-headline-faq">{t('faq.iso.title')}</h3>
+            <p className="text-gray-400 text-sm mb-3 mozilla-headline-faq">{t('faq.iso.certified')}</p>
             <p className="text-gray-300 text-sm leading-relaxed" style={{ fontFamily: 'Inter, Helvetica Neue, SF Pro Text, Segoe UI, Arial, sans-serif' }}>
-              ISO 9001:2015 certified quality management system, demonstrating our commitment to excellence and continuous improvement.
+              {t('faq.iso.description')}
             </p>
           </div>
 
@@ -132,10 +132,10 @@ export default function FAQSection() {
                 className="w-16 h-16 object-contain"
               />
             </div>
-            <h3 className="text-white text-xl font-bold mb-2 mozilla-headline-faq">NBAA</h3>
-            <p className="text-gray-400 text-sm mb-3 mozilla-headline-faq">MEMBER</p>
+            <h3 className="text-white text-xl font-bold mb-2 mozilla-headline-faq">{t('faq.nbaa.title')}</h3>
+            <p className="text-gray-400 text-sm mb-3 mozilla-headline-faq">{t('faq.nbaa.member')}</p>
             <p className="text-gray-300 text-sm leading-relaxed" style={{ fontFamily: 'Inter, Helvetica Neue, SF Pro Text, Segoe UI, Arial, sans-serif' }}>
-              National Business Aviation Association member, providing access to industry best practices and professional development resources.
+              {t('faq.nbaa.description')}
             </p>
           </div>
         </div>

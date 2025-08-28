@@ -1,7 +1,10 @@
 import Header from "@/components/site/Header";
 import Footer from "@/components/site/Footer";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const MentionsLegales = () => {
+  const { t } = useLanguage();
+  
   return (
     <div className="min-h-screen bg-background text-foreground">
       <style>
@@ -28,10 +31,10 @@ const MentionsLegales = () => {
                 fontSize: '4.5rem'
               }}
             >
-              Mentions légales
+              {t('page.mentions.title')}
             </h1>
             <p className="text-gray-300 text-lg">
-              Informations légales et mentions obligatoires
+              {t('page.mentions.description')}
             </p>
           </div>
         </section>
@@ -41,45 +44,35 @@ const MentionsLegales = () => {
           <div className="container mx-auto px-4 max-w-4xl">
             <div className="prose prose-lg max-w-none text-white">
               
-              {/* Mentions Légales */}
+              {/* Legal Notice */}
               <div className="mb-16">
-                <h2 className="text-3xl font-bold text-white mb-8">Mentions Légales</h2>
+                <h2 className="text-3xl font-bold text-white mb-8">{t('page.mentions.title')}</h2>
                 
                 <div className="space-y-6 text-gray-300">
                   <div>
-                    <h3 className="text-xl font-semibold text-white mb-3">Éditeur du site</h3>
-                    <p><strong>AEROLUSTRE</strong></p>
-                    <p>Adresse : [Adresse de l'entreprise]</p>
-                    <p>Téléphone : +33 [Numéro de téléphone]</p>
-                    <p>Email : contact@aerolustre.com</p>
-                    <p>SIRET : [Numéro SIRET]</p>
-                    <p>Directeur de publication : [Nom du directeur]</p>
+                    <h3 className="text-xl font-semibold text-white mb-3">{t('legal.editor.title')}</h3>
+                    <p>{t('legal.editor.company')}<br />
+                    {t('legal.editor.address')}<br />
+                    {t('legal.editor.phone')}<br />
+                    {t('legal.editor.email')}</p>
                   </div>
 
                   <div>
-                    <h3 className="text-xl font-semibold text-white mb-3">Hébergement</h3>
-                    <p>Ce site est hébergé par :</p>
-                    <p>[Nom de l'hébergeur]</p>
-                    <p>Adresse : [Adresse de l'hébergeur]</p>
+                    <h3 className="text-xl font-semibold text-white mb-3">{t('legal.hosting.title')}</h3>
+                    <p>{t('legal.hosting.text')}<br />
+                    {t('legal.hosting.address')}</p>
                   </div>
 
                   <div>
-                    <h3 className="text-xl font-semibold text-white mb-3">Propriété intellectuelle</h3>
-                    <p>L'ensemble de ce site relève de la législation française et internationale sur le droit d'auteur et la propriété intellectuelle. Tous les droits de reproduction sont réservés, y compris pour les documents téléchargeables et les représentations iconographiques et photographiques.</p>
+                    <h3 className="text-xl font-semibold text-white mb-3">{t('legal.intellectual_property.title')}</h3>
+                    <p>{t('legal.intellectual_property.text')}</p>
                   </div>
 
                   <div>
-                    <h3 className="text-xl font-semibold text-white mb-3">Responsabilité</h3>
-                    <p>Les informations contenues sur ce site sont aussi précises que possible et le site est périodiquement remis à jour, mais peut toutefois contenir des inexactitudes, des omissions ou des lacunes. Si vous constatez une lacune, erreur ou ce qui parait être un dysfonctionnement, merci de bien vouloir le signaler par email à l'adresse contact@aerolustre.com.</p>
+                    <h3 className="text-xl font-semibold text-white mb-3">{t('legal.responsibility.title')}</h3>
+                    <p>{t('legal.responsibility.text')}</p>
                   </div>
                 </div>
-              </div>
-
-              {/* Dernière mise à jour */}
-              <div className="border-t border-gray-700 pt-8">
-                <p className="text-sm text-gray-400">
-                  <strong>Dernière mise à jour :</strong> {new Date().toLocaleDateString('fr-FR')}
-                </p>
               </div>
             </div>
           </div>

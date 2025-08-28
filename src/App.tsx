@@ -11,6 +11,7 @@ import InteriorCleaning from "./pages/InteriorCleaning";
 import DisinfectionService from "./pages/DisinfectionService";
 import Contact from "./pages/Contact";
 import QuoteRequest from "./pages/QuoteRequest";
+import ContactSuccess from "./pages/ContactSuccess";
 import About from "./pages/About";
 import Legal from "./pages/Legal";
 import MentionsLegales from "./pages/MentionsLegales";
@@ -33,6 +34,7 @@ const App = () => (
             <Route path="/nettoyage-interieur" element={<InteriorCleaning />} />
             <Route path="/desinfection" element={<DisinfectionService />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/contact-success" element={<ContactSuccess />} />
             <Route path="/demander-un-devis" element={<QuoteRequest />} />
             <Route path="/a-propos" element={<About />} />
             <Route path="/mentions-legales" element={<Legal />} />

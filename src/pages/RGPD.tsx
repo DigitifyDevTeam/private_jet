@@ -1,7 +1,10 @@
 import Header from "@/components/site/Header";
 import Footer from "@/components/site/Footer";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const RGPD = () => {
+  const { t } = useLanguage();
+  
   return (
     <div className="min-h-screen bg-background text-foreground">
       <style>
@@ -28,10 +31,10 @@ const RGPD = () => {
                 fontSize: '4.5rem'
               }}
             >
-              RGPD
+              {t('page.rgpd.title')}
             </h1>
             <p className="text-gray-300 text-lg">
-              Politique de protection des données personnelles
+              {t('page.rgpd.description')}
             </p>
           </div>
         </section>
@@ -43,127 +46,61 @@ const RGPD = () => {
               
               {/* RGPD */}
               <div className="mb-16">
-                <h2 className="text-3xl font-bold text-white mb-8">Politique de Protection des Données (RGPD)</h2>
+                <h2 className="text-3xl font-bold text-white mb-8">{t('rgpd.policy.title')}</h2>
                 
                 <div className="space-y-6 text-gray-300">
                   <div>
-                    <h3 className="text-xl font-semibold text-white mb-3">Responsable du traitement</h3>
-                    <p>AEROLUSTRE est responsable du traitement des données personnelles collectées sur ce site web.</p>
+                    <h3 className="text-xl font-semibold text-white mb-3">{t('rgpd.controller.title')}</h3>
+                    <p>{t('rgpd.controller.text')}</p>
                   </div>
 
                   <div>
-                    <h3 className="text-xl font-semibold text-white mb-3">Données collectées</h3>
-                    <p>Nous collectons les données suivantes :</p>
+                    <h3 className="text-xl font-semibold text-white mb-3">{t('rgpd.data_collected.title')}</h3>
+                    <p>{t('rgpd.data_collected.text')}</p>
                     <ul className="list-disc pl-6 mt-2">
-                      <li>Nom et prénom</li>
-                      <li>Adresse email</li>
-                      <li>Numéro de téléphone</li>
-                      <li>Informations relatives à votre demande de devis</li>
-                      <li>Données de navigation (cookies)</li>
+                      <li>{t('rgpd.data_collected.name')}</li>
+                      <li>{t('rgpd.data_collected.email')}</li>
+                      <li>{t('rgpd.data_collected.phone')}</li>
+                      <li>{t('rgpd.data_collected.quote')}</li>
+                      <li>{t('rgpd.data_collected.navigation')}</li>
                     </ul>
                   </div>
 
                   <div>
-                    <h3 className="text-xl font-semibold text-white mb-3">Finalité du traitement</h3>
-                    <p>Vos données sont collectées pour :</p>
+                    <h3 className="text-xl font-semibold text-white mb-3">{t('rgpd.purpose.title')}</h3>
+                    <p>{t('rgpd.purpose.text')}</p>
                     <ul className="list-disc pl-6 mt-2">
-                      <li>Répondre à vos demandes de devis</li>
-                      <li>Vous contacter concernant nos services</li>
-                      <li>Améliorer notre site web</li>
-                      <li>Respecter nos obligations légales</li>
+                      <li>{t('rgpd.purpose.quote')}</li>
+                      <li>{t('rgpd.purpose.contact')}</li>
+                      <li>{t('rgpd.purpose.improve')}</li>
+                      <li>{t('rgpd.purpose.legal')}</li>
                     </ul>
                   </div>
 
                   <div>
-                    <h3 className="text-xl font-semibold text-white mb-3">Base légale</h3>
-                    <p>Le traitement de vos données est fondé sur :</p>
+                    <h3 className="text-xl font-semibold text-white mb-3">{t('rgpd.retention.title')}</h3>
+                    <p>{t('rgpd.retention.text')}</p>
+                  </div>
+
+                  <div>
+                    <h3 className="text-xl font-semibold text-white mb-3">{t('rgpd.rights.title')}</h3>
+                    <p>{t('rgpd.rights.text')}</p>
                     <ul className="list-disc pl-6 mt-2">
-                      <li>Votre consentement</li>
-                      <li>L'exécution d'un contrat</li>
-                      <li>L'intérêt légitime d'AEROLUSTRE</li>
-                      <li>L'obligation légale</li>
+                      <li>{t('rgpd.rights.access')}</li>
+                      <li>{t('rgpd.rights.rectification')}</li>
+                      <li>{t('rgpd.rights.erasure')}</li>
+                      <li>{t('rgpd.rights.limitation')}</li>
+                      <li>{t('rgpd.rights.portability')}</li>
+                      <li>{t('rgpd.rights.opposition')}</li>
                     </ul>
+                    <p className="mt-4">{t('rgpd.rights.contact')}</p>
                   </div>
 
                   <div>
-                    <h3 className="text-xl font-semibold text-white mb-3">Durée de conservation</h3>
-                    <p>Vos données sont conservées :</p>
-                    <ul className="list-disc pl-6 mt-2">
-                      <li>3 ans pour les données de contact</li>
-                      <li>13 mois pour les cookies</li>
-                      <li>Durée du contrat + 5 ans pour les données contractuelles</li>
-                    </ul>
-                  </div>
-
-                  <div>
-                    <h3 className="text-xl font-semibold text-white mb-3">Destinataires</h3>
-                    <p>Vos données peuvent être transmises à :</p>
-                    <ul className="list-disc pl-6 mt-2">
-                      <li>Nos prestataires techniques</li>
-                      <li>Les autorités compétentes (sur demande)</li>
-                    </ul>
-                  </div>
-
-                  <div>
-                    <h3 className="text-xl font-semibold text-white mb-3">Vos droits</h3>
-                    <p>Conformément au RGPD, vous disposez des droits suivants :</p>
-                    <ul className="list-disc pl-6 mt-2">
-                      <li>Droit d'accès à vos données</li>
-                      <li>Droit de rectification</li>
-                      <li>Droit à l'effacement</li>
-                      <li>Droit à la limitation du traitement</li>
-                      <li>Droit à la portabilité</li>
-                      <li>Droit d'opposition</li>
-                      <li>Droit de retirer votre consentement</li>
-                    </ul>
-                  </div>
-
-                  <div>
-                    <h3 className="text-xl font-semibold text-white mb-3">Contact DPO</h3>
-                    <p>Pour exercer vos droits ou pour toute question relative à la protection de vos données :</p>
-                    <p>Email : dpo@aerolustre.com</p>
-                    <p>Adresse : [Adresse du DPO]</p>
-                  </div>
-
-                  <div>
-                    <h3 className="text-xl font-semibold text-white mb-3">Réclamation</h3>
-                    <p>Vous avez le droit de déposer une réclamation auprès de la CNIL si vous estimez que vos droits ne sont pas respectés.</p>
+                    <h3 className="text-xl font-semibold text-white mb-3">{t('rgpd.security.title')}</h3>
+                    <p>{t('rgpd.security.text')}</p>
                   </div>
                 </div>
-              </div>
-
-              {/* Cookies */}
-              <div className="mb-16">
-                <h2 className="text-3xl font-bold text-white mb-8">Politique des Cookies</h2>
-                
-                <div className="space-y-6 text-gray-300">
-                  <div>
-                    <h3 className="text-xl font-semibold text-white mb-3">Qu'est-ce qu'un cookie ?</h3>
-                    <p>Un cookie est un petit fichier texte stocké sur votre ordinateur lors de la visite d'un site web. Il permet de mémoriser vos préférences et d'améliorer votre expérience de navigation.</p>
-                  </div>
-
-                  <div>
-                    <h3 className="text-xl font-semibold text-white mb-3">Cookies utilisés</h3>
-                    <p>Notre site utilise les cookies suivants :</p>
-                    <ul className="list-disc pl-6 mt-2">
-                      <li><strong>Cookies techniques :</strong> Nécessaires au fonctionnement du site</li>
-                      <li><strong>Cookies analytiques :</strong> Pour analyser l'audience du site</li>
-                      <li><strong>Cookies de personnalisation :</strong> Pour mémoriser vos préférences</li>
-                    </ul>
-                  </div>
-
-                  <div>
-                    <h3 className="text-xl font-semibold text-white mb-3">Gestion des cookies</h3>
-                    <p>Vous pouvez configurer votre navigateur pour refuser les cookies. Cependant, certaines fonctionnalités du site pourraient ne plus être disponibles.</p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Dernière mise à jour */}
-              <div className="border-t border-gray-700 pt-8">
-                <p className="text-sm text-gray-400">
-                  <strong>Dernière mise à jour :</strong> {new Date().toLocaleDateString('fr-FR')}
-                </p>
               </div>
             </div>
           </div>
