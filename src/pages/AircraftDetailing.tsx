@@ -101,7 +101,7 @@ const AircraftDetailing = () => {
               <div className="relative">
                 <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl">
                   <img 
-                    src="/images/privatejet2.jpg" 
+                    src="https://www.shutterstock.com/shutterstock/photos/2652034005/display_1500/stock-photo-advertising-testimonial-photo-of-image-of-an-attractive-cleaning-asian-woman-with-blue-navy-2652034005.jpg" 
                     alt="Aircraft Detailing"
                     className="w-full h-full object-cover"
                   />
@@ -161,7 +161,7 @@ const AircraftDetailing = () => {
               <div className="relative">
                 <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl">
                   <img 
-                    src="/images/privatejet_cleaning.jpg" 
+                    src="https://www.shutterstock.com/shutterstock/photos/2585299253/display_1500/stock-photo-ground-support-washing-gulf-stream-jet-2585299253.jpg" 
                     alt="Luxurious Aircraft Interior"
                     className="w-full h-full object-cover"
                   />

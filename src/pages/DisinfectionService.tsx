@@ -101,7 +101,7 @@ const DisinfectionService = () => {
               <div className="relative">
                 <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl">
                   <img 
-                    src="/images/infection.jpg" 
+                    src="https://www.shutterstock.com/shutterstock/photos/1818164387/display_1500/stock-photo-china-september-a-immigration-team-in-protective-clothing-is-checking-crew-and-private-jet-1818164387.jpg" 
                     alt="Disinfection Service"
                     className="w-full h-full object-cover"
                   />

@@ -72,7 +72,7 @@ const InteriorCleaning = () => {
           {/* Background Image */}
           <div className="absolute inset-0 z-0">
             <img 
-              src="/images/interior.jpg" 
+              src="https://www.shutterstock.com/shutterstock/photos/2648794301/display_1500/stock-photo-studio-shot-photo-of-asian-private-jet-cabin-cleaning-2648794301.jpg" 
               alt="Interior Cleaning"
               className="w-full h-full object-cover"
             />
@@ -101,7 +101,7 @@ const InteriorCleaning = () => {
               <div className="relative">
                 <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl">
                   <img 
-                    src="/images/interior2.webp" 
+                    src="https://www.shutterstock.com/shutterstock/photos/2652032871/display_1500/stock-photo-advertising-testimonial-photo-of-image-of-an-attractive-cleaning-asian-woman-cleaning-a-private-2652032871.jpg" 
                     alt="Interior Cleaning"
                     className="w-full h-full object-cover"
                   />
@@ -161,7 +161,7 @@ const InteriorCleaning = () => {
               <div className="relative">
                 <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl">
                   <img 
-                    src="/images/interior 3.webp" 
+                    src="https://www.shutterstock.com/shutterstock/photos/2532753861/display_1500/stock-photo-advertising-testimonial-photo-of-image-of-an-attractive-man-cleaning-a-private-jet-2532753861.jpg" 
                     alt="Luxurious Aircraft Interior"
                     className="w-full h-full object-cover"
                   />

@@ -375,11 +375,8 @@ const translations = {
     'services.interior.pristine_desc2': 'Notre dévouement à préserver l\'attrait esthétique d\'un avion tout en augmentant sa valeur et sa longévité est inébranlable. La Cabine est où les passagers passent la durée de leur expérience, et maximiser la qualité de cet espace unique devrait être au premier plan pour s\'assurer que votre avion devient plus qu\'un simple mode de voyage ; c\'est une incarnation de la sophistication et de l\'élégance.',
     
     // Contact Success Page
-    'contact_success.title': 'Votre message a été envoyé !',
-    'contact_success.subtitle': 'Merci de nous avoir contacté. Notre équipe vous répondra dans les plus brefs délais.',
-    'contact_success.quote_title': 'Nous avons bien reçu votre message et, afin de pouvoir y répondre au mieux, nous vous invitons à remplir ce formulaire complémentaire.',
-    'contact_success.quote_description': 'Notre équipe reviendra ensuite vers vous dans les plus brefs délais.',
-    
+    'contact_success.title': 'Nous avons bien reçu votre message',
+    'contact_success.quote_description': 'Afin de pouvoir y répondre au mieux, nous vous invitons à remplir ce formulaire complémentaire.\n\nNotre équipe reviendra ensuite vers vous dans les plus brefs délais.',
     // Page Titles
     'page.contact.title': 'Contact',
     'page.contact.description': 'Contactez AeroLustre pour tous vos besoins de nettoyage d\'avions. Notre équipe est prête à vous fournir un service exceptionnel et un support de qualité.',
@@ -812,8 +809,8 @@ const translations = {
     'services.interior.pristine_desc2': 'Our dedication to preserving an aircraft\'s aesthetic appeal while increasing its value and longevity is unwavering. The Cabin is where passengers spend the duration of their experience, and maximising the quality of this unique space should be at the forefront of ensuring your aircraft becomes more than just a mode of travel; it\'s an embodiment of sophistication and elegance.',
     
     // Contact Success Page
-    'contact_success.title': 'Your message has been sent!',
-    'contact_success.subtitle': 'Thank you for contacting us. Our team will respond to you as soon as possible.',
+    'contact_success.title': 'We have received your message',
+    'contact_success.subtitle': 'We have received your message and, in order to respond to it as best as possible, we invite you to fill out this complementary form.\n\nOur team will then get back to you as soon as possible.',
     'contact_success.quote_title': 'We have received your message and, in order to respond to it as best as possible, we invite you to fill out this complementary form.',
     'contact_success.quote_description': 'Our team will then get back to you as soon as possible.',
     

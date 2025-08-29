@@ -135,17 +135,7 @@ export function AirportsSection() {
           ))}
         </div>
 
-        {/* CTA Section */}
-        <div className="mt-16 text-center">
-          <p className="text-gray-400 text-lg mb-8 font-medium" style={{ fontFamily: '"Mozilla Headline", sans-serif', fontWeight: 400 }}>
-            {t('airports.cta_text')}
-          </p>
-          <Link to="/contact">
-            <button className="bg-white text-black hover:bg-gray-200 transition-colors px-8 py-4 text-lg rounded-full font-bold" style={{ fontFamily: '"Mozilla Headline", sans-serif', fontWeight: 600 }}>
-              {t('airports.cta_button')}
-            </button>
-          </Link>
-        </div>
+
       </div>
     </section>
   );

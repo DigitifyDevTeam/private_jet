@@ -55,7 +55,7 @@ export default function DiscoverFleetSection() {
             <div className="group relative rounded-2xl sm:rounded-3xl overflow-hidden bg-gray-800 min-h-[300px] sm:min-h-[350px] lg:min-h-[400px] hover:scale-[1.02] transition-all duration-500 cursor-pointer">
               <div className="absolute inset-0">
                 <img
-                  src="/images/private-jet.png"
+                  src="https://www.shutterstock.com/shutterstock/photos/2518073043/display_1500/stock-photo-private-jet-interior-minimalistic-design-dark-green-accents-luxurious-leather-seating-sleek-2518073043.jpg"
                   alt="Luxurious private jet interior with blue ambient lighting and plush seating"
                   className="w-full h-full object-cover"
                 />
@@ -99,7 +99,7 @@ export default function DiscoverFleetSection() {
             <div className="group relative rounded-2xl sm:rounded-3xl overflow-hidden bg-gray-800 min-h-[300px] sm:min-h-[350px] lg:min-h-[400px] hover:scale-[1.02] transition-all duration-500 cursor-pointer">
               <div className="absolute inset-0">
                 <img
-                  src="/images/vip-airliner.png"
+                  src="https://www.shutterstock.com/shutterstock/photos/2643644071/display_1500/stock-photo-jet-parked-on-the-tarmac-at-sunrise-with-boarding-stairs-extended-aircraft-is-illuminated-by-soft-2643644071.jpg"
                   alt="Premium VIP airliner cabin with executive seating and luxury amenities"
                   className="w-full h-full object-cover"
                 />
@@ -143,7 +143,7 @@ export default function DiscoverFleetSection() {
             <div className="group relative rounded-2xl sm:rounded-3xl overflow-hidden bg-gray-800 min-h-[300px] sm:min-h-[350px] lg:min-h-[400px] hover:scale-[1.02] transition-all duration-500 cursor-pointer">
               <div className="absolute inset-0">
                 <img
-                  src="/images/business-vip.png"
+                  src="https://www.shutterstock.com/shutterstock/photos/1583308570/display_1500/stock-photo-businessman-talking-by-phone-on-board-the-modern-private-airplane-1583308570.jpg"
                   alt="Commercial VIP aircraft with sophisticated interior and business-class amenities"
                   className="w-full h-full object-cover"
                 />

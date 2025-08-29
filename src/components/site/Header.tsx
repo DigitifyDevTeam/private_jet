@@ -31,7 +31,7 @@ export default function Header() {
     {
       href: "/nettoyage-interieur",
       title: t('service.interior'),
-      image: "/images/interior.jpg",
+      image: "https://www.shutterstock.com/shutterstock/photos/2648794301/display_1500/stock-photo-studio-shot-photo-of-asian-private-jet-cabin-cleaning-2648794301.jpg",
       description: t('service.interior.description')
     },
     {
