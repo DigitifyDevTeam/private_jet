@@ -25,7 +25,7 @@ const translations = {
     'service.exterior': 'Nettoyage Extérieur',
     'service.interior': 'Nettoyage Intérieur',
     'service.disinfection': 'Désinfection',
-    'service.exterior.description': 'Services de nettoyage professionnels',
+    'service.exterior.description': 'Service de nettoyage extérieur',
     'service.interior.description': 'Services de nettoyage intérieur',
     'service.disinfection.description': 'Services de désinfection',
     
@@ -458,7 +458,7 @@ const translations = {
     'service.exterior': 'Exterior Cleaning',
     'service.interior': 'Interior Cleaning',
     'service.disinfection': 'Disinfection',
-    'service.exterior.description': 'Professional detailing services',
+    'service.exterior.description': 'Exterior cleaning service',
     'service.interior.description': 'Interior cleaning services',
     'service.disinfection.description': 'Sanitization services',
     
